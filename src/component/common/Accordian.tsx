@@ -3,7 +3,8 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
-//import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { ACCORDIAN } from '../../constant/common';
 
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState<string | false>(false);
@@ -15,56 +16,68 @@ export default function ControlledAccordions() {
 
   return (
     <div>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary
-          //   expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
-        >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Estimate your Shipping
-          </Typography>
-          <Typography sx={{ color: 'text.secondary' }}>Shipping to 91001</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            SHIIPING DETAILS
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+      {
+        ACCORDIAN.map((key) => {
+          return (<Accordion expanded={expanded === key.panel} onChange={handleChange(key.panel)}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1bh-content"
+              id="panel1bh-header"
+            >
+              <span>
+                {key.typo1}
+              </span>
+              <span>
+                {key.typo2}
+              </span>
+            </AccordionSummary>
+            <AccordionDetails>
+              <span>
+                {key.typo3}
+              </span>
+            </AccordionDetails>
+          </Accordion>
+          )
+        })
+      }
+
+      {/* 
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary
-          //   expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Enter a Coupon Code</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>
+          <span>
+            Enter a Coupon Code
+          </span>
+          <span>
             20% discount applied
-          </Typography>
+          </span>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <span>
             DISCOUNT SUMMARY
-          </Typography>
+          </span>
         </AccordionDetails>
       </Accordion>
+
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary
-          //   expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>
+          <span>
             Apply Gift Card
-          </Typography>
+          </span>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <span>
             GIFT CART DETAILS
-          </Typography>
+          </span>
         </AccordionDetails>
-      </Accordion>
+      </Accordion> */}
     </div>
   );
 }

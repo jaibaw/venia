@@ -23,3 +23,11 @@ export const SIZE = [
     { id: 5, img: 'XL', value: 'X-Large' },
     { id: 6, img: 'XXL', value: 'XX-Large' },
 ]
+
+
+export const ACCORDIAN = [
+    { id: 1, typo1: 'Estimate your Shipping', typo2: 'Shipping to 91001', typo3: ' Shipping Details', panel: 'panel1' },
+    { id: 2, typo1: 'Enter a Coupon Code', typo2: '20% discount applied', typo3: 'Dscount Details', panel: 'panel2' },
+    { id: 3, typo1: 'Apply Gift Card', typo2: '', typo3: 'Gift Details', panel: 'panel3' },
+
+]
