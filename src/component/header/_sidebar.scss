@@ -1,0 +1,21 @@
+.sidebar-container {
+    width: 306px;
+    height: 1369px;
+
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/14px var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--gray-d2);
+    text-align: left;
+    font: normal normal normal 20px/14px Muli;
+    letter-spacing: 0px;
+    color: #181C24;
+    opacity: 1;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
