@@ -44,7 +44,6 @@ function* get_Productt_By_Category(action: any): any {
 function* get_Single_ProductDetail(action: any): any {
     try {
         const response = yield call(get_singleProductDetail, action.payload);
-        console.log("ss", response)
         if (response != undefined) {
             yield put({
                 type: ActionTypes.GET_PRODUCTS.GET_SINGLE_PRODUCT_DATA_SUCCESS,
@@ -60,7 +59,6 @@ function* get_Single_ProductDetail(action: any): any {
 function* get_Sort_ProductPrice(action: any): any {
     try {
         const response = yield call(get_sortProductPrice, action.payload);
-        console.log("s0s", response)
         if (response != undefined) {
             yield put({
                 type: ActionTypes.GET_PRODUCTS.SORT_PRODUCT_PRICE_SUCCESS,

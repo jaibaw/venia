@@ -30,7 +30,6 @@ export const get_productByCategory = (data: any) => {
 export const get_singleProductDetail = (data: any) => {
     return api.get(`${API_URL.GET_SINGLE_PRODUCT}/${data}`, data).then(
         (resp: any) => {
-            console.log("s", resp)
             return resp.data;
         },
         (err: any) => {
@@ -44,7 +43,6 @@ export const get_singleProductDetail = (data: any) => {
 export const get_sortProductPrice = (data: any) => {
     return api.get(`${API_URL.GET_PRODUCT_SORTING}?sort=${data}`, data).then(
         (resp: any) => {
-            console.log("s0", resp)
             return resp.data;
         },
         (err: any) => {

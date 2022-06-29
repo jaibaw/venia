@@ -19,7 +19,6 @@ export const action_fetchSingleProduct = (payload: any) => ({
     type: ActionTypes.GET_PRODUCTS.GET_SINGLE_PRODUCT_DATA
 });
 
-debugger
 // to sorting product price  
 export const action_sortProductPrice = (payload: any) => ({
     payload,

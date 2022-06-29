@@ -10,9 +10,9 @@ function Sidebar() {
                         {SIZE.map(function (key) {
                             return (
                                 <div>
-                                    <input type="checkbox" id="key" name="key" value={key}>
+                                    <input type="checkbox" id="key" name="key" value={key.value}>
                                     </input>
-                                    <label>{key}</label>
+                                    <label>{key.value}</label>
                                     <br></br>
                                 </div>
                             );

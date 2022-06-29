@@ -27,7 +27,6 @@ export const getProductListReducer = (state: any = initialState, action: any) =>
 
         // get the single product details
         case ActionTypes.GET_PRODUCTS.GET_SINGLE_PRODUCT_DATA_SUCCESS:
-            debugger
             return {
                 ...state,
                 singleProductDetail: action.payload
@@ -35,7 +34,6 @@ export const getProductListReducer = (state: any = initialState, action: any) =>
 
         // get the product list  based on price sorting
         case ActionTypes.GET_PRODUCTS.SORT_PRODUCT_PRICE_SUCCESS:
-            debugger
             return {
                 ...state,
                 getProductList: action.payload

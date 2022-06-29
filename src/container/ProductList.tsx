@@ -10,7 +10,6 @@ import { action_fetchProductList } from '../actions/get-products';
 function ProductList() {
     return (
         <div className='product-list-container'>
-            <Appbar />
             <Banner />
             <div className="aem-Grid aem-Grid--12">
                 <div className='aem-GridColumn aem-GridColumn--default--3'>
@@ -20,7 +19,6 @@ function ProductList() {
                     <ProductDisplay />
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
