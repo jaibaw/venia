@@ -21,7 +21,7 @@ function Pagination(props: any) {
     pageSize
   );
 
-  console.log(paginationRange)
+
   if (currentPage === 0 || (paginationRange && paginationRange.length < 2)) {
     return null;
   }
@@ -35,7 +35,6 @@ function Pagination(props: any) {
   };
 
   let lastPage = paginationRange && paginationRange[paginationRange.length - 1];
-  {console.log(paginationRange,"paginationRange-pag" , lastPage)}
        
   return (
     <ul

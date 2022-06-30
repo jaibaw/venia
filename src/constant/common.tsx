@@ -1,7 +1,7 @@
-
-import venia_logo from '../assests/images/venia-logo.jpg';
-
-// export const SIZE = ['X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large']
+import color1 from '../assests/images/color1.png';
+import color2 from '../assests/images/color2.png';
+import color3 from '../assests/images/color3.png';
+import color4 from '../assests/images/color4.png';
 
 export const STYLE = ['Outdoor', 'Casual', 'Athleisuve', 'Running', 'Active']
 
@@ -11,8 +11,10 @@ export const BRAND = ['Calvin klein', 'Dolee & Gabbana', 'Miu Miu', 'Prada', 'Ra
 export const IMG_CONST_VALUE = [1, 2, 3, 4, 5]
 
 export const COLOR = [
-    { id: 1, img: venia_logo },
-    { id: 2, img: venia_logo },
+    { id: 1, img: color1 },
+    { id: 2, img: color2 },
+    { id: 3, img: color3 },
+    { id: 4, img: color4 },
 ]
 
 export const SIZE = [
@@ -29,5 +31,14 @@ export const ACCORDIAN = [
     { id: 1, typo1: 'Estimate your Shipping', typo2: 'Shipping to 91001', typo3: ' Shipping Details', panel: 'panel1' },
     { id: 2, typo1: 'Enter a Coupon Code', typo2: '20% discount applied', typo3: 'Dscount Details', panel: 'panel2' },
     { id: 3, typo1: 'Apply Gift Card', typo2: '', typo3: 'Gift Details', panel: 'panel3' },
+]
+
+export const FILTER = [
+    { id: 1, value: "women's clothing", filterLabel: "Women's clothing" },
+    { id: 2, value: "men's clothing", filterLabel: "Men's clothing" },
+    { id: 3, value: "jewelery", filterLabel: 'Jewelery' },
+    { id: 4, value: "electronics", filterLabel: 'Electronics' },
+    { id: 5, value: "desc", filterLabel: 'Low to High Price' },
+    { id: 6, value: "asc", filterLabel: 'High to Low Price' },
 
 ]

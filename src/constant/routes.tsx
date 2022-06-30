@@ -1,5 +1,5 @@
 export const ROUTES = {
-    PATH_HOME: "/",
+    PRODUCT_LIST: "/product-list",
 
     PRODUCT_DETAILS: "/product-detail",
 

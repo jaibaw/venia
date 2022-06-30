@@ -7,13 +7,18 @@ import Quantity from '../common/Quantity';
 import Size from '../common/Size';
 import share from "../../assests/images/share.svg";
 import heart from "../../assests/images/heart.svg";
+import addtocart from "../../assests/images/addtocart.png";
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../constant/routes';
 
 function SingleProductDetails() {
 
     const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
 
     console.log("singleProductDetail", singleProductDetail)
-
+    const onAddtoCart = () => {
+        <Link to="/product-list"></Link>
+    }
     return (
         <div>
             <div className="aem-Grid aem-Grid--12">
@@ -46,9 +51,7 @@ function SingleProductDetails() {
                     <Quantity />
                 </div>
                 <div>
-                    <Button variant="outlined" size="small">
-                        Small
-                    </Button>
+                    <Link to={ROUTES.SHOPPING_CART}>{<img src={addtocart} onClick={onAddtoCart}></img>}</Link>
                 </div>
                 <div>
                     <img src={heart}></img>

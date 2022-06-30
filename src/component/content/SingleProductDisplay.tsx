@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { action_fetchSingleProduct } from '../../actions/get-products';
 import { IMG_CONST_VALUE } from '../../constant/common';
 
 
@@ -9,7 +8,7 @@ function SingleProductDisplay() {
 
     const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
 
-    console.log("singleProductDetail", singleProductDetail.rating ? singleProductDetail.rating.count : "")
+    console.log("singleProductDetail-d", singleProductDetail, singleProductDetail.rating ? singleProductDetail.rating.count : "")
 
     return (
         <div>

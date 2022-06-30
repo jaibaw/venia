@@ -29,7 +29,7 @@ function App() {
           <main>
             {/* 1,159 */}
             <Routes>
-              <Route path={ROUTES.PATH_HOME} element={<ProductList />} />
+              <Route path={ROUTES.PRODUCT_LIST} element={<ProductList />} />
               <Route path={ROUTES.PRODUCT_DETAILS} element={<ProductDetail />} />
               <Route path={ROUTES.SHOPPING_CART} element={<ShoppingCart />} />
             </Routes>

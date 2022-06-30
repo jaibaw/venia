@@ -2,6 +2,8 @@ import venia_logo from '../../assests/images/venia-logo.jpg';
 import search from '../../assests/images/search.svg';
 import user from '../../assests/images/user.svg';
 import archive from '../../assests/images/archive.svg';
+import { ROUTES } from '../../constant/routes';
+import { Link } from 'react-router-dom';
 
 function Appbar() {
     return (
@@ -10,7 +12,7 @@ function Appbar() {
                 <header>
                     <nav className="aem-Grid aem-Grid--12">
                         <div className="aem-GridColumn aem-GridColumn--default--2 logo">
-                            <img className='venia-logo' src={venia_logo}></img>
+                        <Link to={ROUTES.PRODUCT_LIST}>{<img className='venia-logo' src={venia_logo}></img>}</Link>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--hide aem-GridColumn--phone--hide main_menus">
                             <ul className='menu-class'>
