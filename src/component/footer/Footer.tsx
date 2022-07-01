@@ -1,75 +1,90 @@
-import React from 'react';
 import venia_logo from '../../assests/images/venia-logo.jpg';
+import facebook from '../../assests/images/facebook.svg';
+import twitter from '../../assests/images/twitter.svg';
+import instagram from '../../assests/images/instagram.svg';
 
 function Footer() {
     return (
-        <div>
-            <div >
+        <div className='footer-container'>
+            <div className='footer-main-container'>
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-GridColumn aem-GridColumn--default--3">
-                        <h6>Account</h6>
-                        <ul>
-                            <li>
-                                <a href="#">Sign In</a>
-                            </li>
-                            <li>
-                                <a href="#">Register</a>
-                            </li>
-                            <li>
-                                <a href="#">Order Status</a>
-                            </li>
-                        </ul>
+                        <div className='footer-sub-container'>
+                            <span className='footer-heading-span '>Account</span>
+                            <ul className='footer-sub-heading-sapn'>
+                                <li >Women</li>
+                                <li >Men</li>
+                                <li >Smart Gear</li>
+                                <li >Accessories</li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--3">
-                        <h6>About Us </h6>
-                        <ul>
-                            <li>
-                                <a href="#">Our Story</a>
-                            </li>
-                            <li>
-                                <a href="#">Carrers</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="aem-GridColumn aem-GridColumn--default--3">
-                        <h6>Help </h6>
-                        <ul>
-                            <li>
-                                <a href="#">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Order Status</a>
-                            </li>
-                            <li>
-                                <a href="#">Return</a>
-                            </li>
-                        </ul>
+                        <div className='footer-sub-container'>
+                            <span className='footer-heading-span '>About Us </span>
+                            <ul className='footer-sub-heading-sapn'>
+                                <li>
+                                    Our Story
+                                </li>
+                                <li>
+                                    Carrers
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div className="aem-GridColumn aem-GridColumn--default--3">
-                        <h6>Follow Us!</h6>
-                        <ul>
-                            <li>
-                                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</a>
-                            </li>
-                        </ul>
+                        <div className='footer-sub-container'>
+                            <span className='footer-heading-span '>Help</span>
+                            <ul className='footer-sub-heading-sapn'>
+                                <li>
+                                    Contact Us
+                                </li>
+                                <li>
+                                    Order Status
+                                </li>
+                                <li>
+                                    Return
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="aem-GridColumn aem-GridColumn--default--3">
+                        <div>
+                            <span className='footer-heading-span '>Follow Us!</span>
+                            <ul className='footer-sub-heading-sapn'>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                </li>
+                                <img className='footer-social-media-logo' src={instagram}></img>
+
+                                <img className='footer-social-media-logo' src={facebook}></img>
+
+                                <img className='footer-social-media-logo' src={twitter}></img>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div className='footer-copy-right-container'>
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-GridColumn aem-GridColumn--default--3">
-                        <img src={venia_logo}></img>
+                        <img className='footer-venia-logo' src={venia_logo}></img>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--6">
-                        <span>© Company Name Address Ave, City Name, State ZIP</span>
+                        <span className='footer-copy-right-span'>© Company Name Address Ave, City Name, State ZIP</span>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--3">
-                        <span>
-                            Terms of Use
-                        </span>
-                        <span>
-                            Privacy Policy
-                        </span>
+                        <div className='footer-term-policy-container'>
+                            <span className='footer-term-policy-span'>
+                                Terms of Use
+                            </span>
+                            <span className='footer-term-policy-span'>
+                                Privacy Policy
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

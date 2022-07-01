@@ -14,38 +14,45 @@ function ProductDisplay() {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-    const productList = useSelector((state: any) => state.getProductList.getProductList);
+    const List = useSelector((state: any) => state.getProductList.getProductList);
 
     const onProductClick = (e: any) => {
         dispatch(action_fetchSingleProduct(parseInt(e.target.id)));
     }
 
+    const productList = List.slice(0, 15);
+
     return (
-        <div className='product-display-container'>
+        <div className='product-display-list-container'>
             <div className="aem-Grid aem-Grid--12">
                 {productList && productList.map(function (key: any) {
                     return (
                         <div className="aem-GridColumn aem-GridColumn--default--4">
-                            <div>
-                                <Link to={ROUTES.PRODUCT_DETAILS}>
-                                    {<img
-                                        className='product-img'
-                                        src={key.image}
-                                        id={key.id}
-                                        onClick={onProductClick}
-                                    >
-                                    </img>
-                                    }
-                                </Link>
-                            </div>
-                            <div>
-                                <label>{key.title}</label>
-                            </div>
-                            <div>
-                                <label>{key.price}</label>
-                            </div>
-                            <div>
-                                <img src={heart}></img>
+                            <div className='product-display-container'>
+                                <div>
+                                    <Link to={ROUTES.PRODUCT_DETAILS}>
+                                        {<img
+                                            className='product-img'
+                                            src={key.image}
+                                            id={key.id}
+                                            onClick={onProductClick}
+                                        >
+                                        </img>
+                                        }
+                                    </Link>
+                                </div>
+                                <div className='product-discription'>
+                                    <div>
+                                        <label>{key.title}</label>
+                                    </div>
+                                    <div>
+                                        <label>${key.price}</label>
+                                    </div>
+                                    <div>
+                                        <img src={heart}></img>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     );

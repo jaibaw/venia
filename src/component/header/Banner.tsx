@@ -19,7 +19,6 @@ function Banner() {
     const filterChange = (e: any) => {
         setFilterValue(e.target.value);
         if ((e.target.value === 'desc') || (e.target.value === 'asc')) {
-            debugger
             dispatch(action_sortProductPrice(e.target.value));
         } else {
             dispatch(action_fetchProductByCategory(e.target.value));
@@ -38,33 +37,39 @@ function Banner() {
                     </img>
                 </div>
             </div>
-            <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--3">
-                    <Breadcrum
-                        label={filterValue}
-                    />
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--6">
-                    {productList && productList ? productList.length : 0}
-                    <span>Results</span>
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--3">
-                    <TextField
-                        id="outlined-select-currency"
-                        select
-                        label="Select"
-                        value={filterValue}
-                        onChange={filterChange}
-                        helperText="Please select your currency"
-                    >
-                        {FILTER.map(function (option: any) {
-                            return (
-                                <MenuItem key={option.id} value={option.value}>
-                                    {option.filterLabel}
-                                </MenuItem>
-                            );
-                        })}
-                    </TextField>
+
+            {/* Breadcrum menus */}
+            <div className='banner-sub-container'>
+                <div className="aem-Grid aem-Grid--12">
+                    <div className="aem-GridColumn aem-GridColumn--default--3">
+                        <Breadcrum
+                            label={filterValue}
+                        />
+                    </div>
+                    <div className="aem-GridColumn aem-GridColumn--default--6">
+                        <span className='result-span'> {productList && productList ? productList.length : 0}</span>
+
+                        <span className='result-span'>Results</span>
+                    </div>
+                    <div className="aem-GridColumn aem-GridColumn--default--3" >
+                        <TextField
+                            id="outlined-select-currency"
+                            select
+                            label="Filter"
+                            value={filterValue}
+                            onChange={filterChange}
+                            className="filter-dropdown"
+                            size='small'
+                        >
+                            {FILTER.map(function (option: any) {
+                                return (
+                                    <MenuItem key={option.id} value={option.value}>
+                                        <span className='filter-dropdown-span'>{option.filterLabel} </span>
+                                    </MenuItem>
+                                );
+                            })}
+                        </TextField>
+                    </div>
                 </div>
             </div>
 

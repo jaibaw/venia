@@ -5,7 +5,6 @@ import Appbar from '../component/header/Appbar';
 import Banner from '../component/header/Banner';
 import Sidebar from '../component/header/Sidebar';
 import ProductDisplay from '../component/content/ProductDisplay';
-import { action_fetchProductList } from '../actions/get-products';
 
 function ProductList() {
     return (

@@ -1,24 +1,52 @@
 .banner-container {
     margin-top: 30px;
+}
+
+.women-block {
+    width: 555px;
+    height: 352px;
+    margin-bottom: 32px;
+}
+
+.man-play {
+    width: 700px;
+    height: 320px;
+    margin-left: 6px;
+    margin-top: 16px;
+}
+
+.banner-sub-container {
+    height: 44px;
+    margin-bottom: 30px;
+}
+
+.result-span {
+    margin-left: 4px;
     /* UI Properties */
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-muli);
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-172026);
     text-align: left;
-    font: normal normal 600 16px/20px Muli;
+    font: normal normal 600 20px/14px Muli;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+
+}
+
+.filter-dropdown-span {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: left;
+    font: normal normal normal 16px/24px Muli;
     letter-spacing: 0px;
     color: #172026;
     opacity: 1;
 }
 
-.women-block {
-    width: 525px;
-    height: 352px;
-}
-
-.man-play {
-    width: 735px;
-    height: 320px;
-    margin-left: -15px;
-    margin-top: 16px;
+.filter-dropdown {
+    width: 260px;
+    height: 44px;
 }

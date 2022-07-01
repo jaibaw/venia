@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
 import paypal from "../../assests/images/paypal.png";
 import checkout from "../../assests/images/checkout.png";
+import { useSelector } from 'react-redux';
 
-function PriceSummary() {
+function PriceSummary(props: any) {
+
+    const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
+
     return (
         <div>
             <label>Pricing Summary</label>
@@ -35,18 +39,18 @@ function PriceSummary() {
 
                 <div className="aem-GridColumn aem-GridColumn--default--6">
                     <div>
-                        <label>$</label>
+                        <label>${singleProductDetail.price * 4}</label>
                     </div>
                     <div>
-                        <label>-$</label>
-                    </div>
-
-                    <div>
-                        <label>-$</label>
+                        <label>-${35.43}</label>
                     </div>
 
                     <div>
-                        <label>$</label>
+                        <label>-${50}</label>
+                    </div>
+
+                    <div>
+                        <label>${23.28}</label>
                     </div>
 
                     <div>
@@ -54,7 +58,7 @@ function PriceSummary() {
                     </div>
 
                     <div>
-                        <label>$</label>
+                        <label>${((singleProductDetail.price * 3) - 62.15).toFixed(2)}</label>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,9 @@
 @import "./App.scss";
 
 body {
-  width: 87.25rem;
+  width: 82.25rem;
+  margin-left: 50px;
+  margin-right: 50px;
   font-family: var(--unnamed-font-style-normal) normal var(--unnamed-font-family-muli);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,9 +31,9 @@ code {
  * from Adobe Systems Incorporated.
  */
 /* grid component */
-// li {
-//   display: inline;
-// }
+li {
+ margin-bottom: 6px;
+}
 
 .aem-Grid {
   display: block;

@@ -1,6 +1,4 @@
-import { Button } from '@mui/material';
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Breadcrum from '../common/Breadcrum';
 import Color from '../common/Color';
 import Quantity from '../common/Quantity';
@@ -15,10 +13,6 @@ function SingleProductDetails() {
 
     const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
 
-    console.log("singleProductDetail", singleProductDetail)
-    const onAddtoCart = () => {
-        <Link to="/product-list"></Link>
-    }
     return (
         <div>
             <div className="aem-Grid aem-Grid--12">
@@ -51,7 +45,7 @@ function SingleProductDetails() {
                     <Quantity />
                 </div>
                 <div>
-                    <Link to={ROUTES.SHOPPING_CART}>{<img src={addtocart} onClick={onAddtoCart}></img>}</Link>
+                    <Link to={ROUTES.SHOPPING_CART}>{<img src={addtocart}></img>}</Link>
                 </div>
                 <div>
                     <img src={heart}></img>
