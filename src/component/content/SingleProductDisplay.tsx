@@ -4,25 +4,26 @@ import { IMG_CONST_VALUE } from '../../constant/common';
 
 
 function SingleProductDisplay() {
-
-
     const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
-
-    console.log("singleProductDetail-d", singleProductDetail, singleProductDetail.rating ? singleProductDetail.rating.count : "")
 
     return (
         <div>
             <div className="aem-Grid aem-Grid--12">
                 <div className='aem-GridColumn aem-GridColumn--default--3'>
                     {
-                        IMG_CONST_VALUE.map((key) => {
-                            return (
-                                <div>
-                                    <img className='side-product-display' src={singleProductDetail.image}>
-                                    </img>
-                                </div>
-                            )
-                        })
+                        <div>
+                            {
+                                IMG_CONST_VALUE.map((key) => {
+                                    return (
+                                        <div className='side-product-div'>
+                                            <img className='side-product-display' src={singleProductDetail.image}>
+                                            </img>
+                                        </div>
+                                    )
+                                })
+
+                            }
+                        </div>
                     }
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--9'>
@@ -32,13 +33,13 @@ function SingleProductDisplay() {
             </div>
             <div className="aem-Grid aem-Grid--12">
                 <div>
-                    <label>
+                    <label className='product-title-span'>
                         {singleProductDetail.title}
                     </label>
                 </div>
                 <div>
-                    <label>
-                        description
+                    <label className='product-discription-span'>
+                        Description
                     </label>
                 </div>
                 <div>

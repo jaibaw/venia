@@ -1,9 +1,28 @@
 .product-display {
-    width: 403px;
-    height: 510px;
+    width: 400px;
+    height: 600px;
+    border: aliceblue 1px solid;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 49px;
+    /* UI Properties */
+    opacity: 1;
 }
 
 .side-product-display {
     width: 85px;
     height: 100px;
+    padding-bottom: 16px;
+    border: aliceblue 1px solid;
+}
+
+.side-product-div{
+    margin-bottom: 10px;
+}
+.product-title-span {
+    font: normal normal 600 25px/35px Source Serif Pro;
+
+}
+
+.product-discription-span {
+    font: normal normal 600 15px/20px Muli;
 }

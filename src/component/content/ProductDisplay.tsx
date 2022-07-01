@@ -29,7 +29,7 @@ function ProductDisplay() {
                     return (
                         <div className="aem-GridColumn aem-GridColumn--default--4">
                             <div className='product-display-container'>
-                                <div>
+                                <div className='product-display-img-div'>
                                     <Link to={ROUTES.PRODUCT_DETAILS}>
                                         {<img
                                             className='product-img'

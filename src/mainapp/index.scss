@@ -2,7 +2,7 @@
 
 body {
   width: 82.25rem;
-  margin-left: 50px;
+  margin-left: 30px;
   margin-right: 50px;
   font-family: var(--unnamed-font-style-normal) normal var(--unnamed-font-family-muli);
   -webkit-font-smoothing: antialiased;
@@ -13,6 +13,12 @@ body {
 code {
   font-family: normal Muli;
 }
+
+@font-face {
+  font-family: 'Muli';
+  src: local('Muli'), url(../assests/fonts/Muli-Light.ttf) format('opentype');
+}
+
 
 /*
  * ADOBE CONFIDENTIAL
@@ -32,7 +38,7 @@ code {
  */
 /* grid component */
 li {
- margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 .aem-Grid {

@@ -8,6 +8,10 @@ import heart from "../../assests/images/heart.svg";
 import addtocart from "../../assests/images/addtocart.png";
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../constant/routes';
+import Breathable from '../../assests/images/Breathable.png';
+import fabricdetails from '../../assests/images/fabricdetails.png';
+import Lightweightfabric from '../../assests/images/Lightweightfabric.png';
+import Sweatwicking from '../../assests/images/Sweatwicking.png';
 
 function SingleProductDetails() {
 
@@ -19,65 +23,90 @@ function SingleProductDetails() {
                 <div>
                     <Breadcrum />
                 </div>
-                <div>
-                    <label>
+                <div className="product-title">
+                    <label className="product-title-span">
                         {singleProductDetail.title}
+                    </label>
+                </div>
+                <div>
+                    <label className="product-price-span">
+                        ${singleProductDetail.price}
                     </label>
                 </div>
 
                 <div>
-                    <label>
+                    <label className="product-rating-span">
                         {singleProductDetail.rating ? singleProductDetail.rating.rate : ""} {singleProductDetail.rating ? singleProductDetail.rating.count : ""}
                     </label>
                 </div>
-                <div>
+                <div className="product-discription-details">
                     <p>
                         {singleProductDetail.description}
                     </p>
                 </div>
-                <div>
+                <div className="product-attribute">
+                    <div className="product-attribute">
+                        <span className="product-attribute-span">Color</span>
+                    </div>
                     <Color />
                 </div>
-                <div>
+                <div className="product-attribute">
+                    <div className="product-attribute">
+                        <span className="product-attribute-span">Size</span>
+                    </div>
                     <Size />
                 </div>
-                <div>
+                <div className="product-attribute">
+                    <div className="product-attribute">
+                        <span className="product-attribute-span">Quantity</span>
+                    </div>
                     <Quantity />
                 </div>
                 <div>
-                    <Link to={ROUTES.SHOPPING_CART}>{<img src={addtocart}></img>}</Link>
+                    <Link to={ROUTES.SHOPPING_CART}>{<img className="product-add-to-cart-logo" src={addtocart}></img>}</Link>
                 </div>
-                <div>
-                    <img src={heart}></img>
-                    <label>Save</label>
+                <div className="share-save-div">
+                    <div className="aem-Grid aem-Grid--12">
+                        <div className="aem-GridColumn aem-GridColumn--default--2">
+                            <img className="save-share-logo" src={heart}></img>
+                            <label className="save-share-span">Save</label>
+                        </div>
 
-                    <img src={share}></img>
-                    <label>Share</label>
-
+                        <div className="aem-GridColumn aem-GridColumn--default--3">
+                            <img className="save-share-logo" src={share}></img>
+                            <label className="save-share-span">Share</label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12">
-                <label>Details</label>
-                <div className="aem-GridColumn aem-GridColumn--default--6 logo">
+                <div className="product-attribute">
+                    <label className="product-attribute-span">Details</label>
+                </div>
+                <div className="aem-GridColumn aem-GridColumn--default--4 logo">
                     <div>
+                        <img className="fabric-details-logo" src={Sweatwicking}></img>
                         <label>
                             Sweat-wicking
                         </label>
                     </div>
                     <div>
+                        <img className="fabric-details-logo" src={Lightweightfabric}></img>
                         <label>
                             Lightweight fabric
                         </label>
                     </div>
                 </div>
 
-                <div className="aem-GridColumn aem-GridColumn--default--6 logo">
+                <div className="aem-GridColumn aem-GridColumn--default--4 logo">
                     <div>
+                        <img className="fabric-details-logo" src={Breathable}></img>
                         <label>
                             Breathable
                         </label>
                     </div>
                     <div>
+                        <img className="fabric-details-logo" src={fabricdetails}></img>
                         <label>
                             69% nylon, 31% lycra
                         </label>

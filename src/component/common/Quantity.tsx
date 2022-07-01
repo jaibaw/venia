@@ -1,8 +1,6 @@
-import { Box } from '@mui/material';
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import pluscircle from "../../assests/images/pluscircle.svg";
-import minuscircle from "../../assests/images/.minuscircle.svg";
+import minuscircle from "../../assests/images/minuscircle.svg";
 
 function Quantity(props: any) {
 
@@ -20,16 +18,30 @@ function Quantity(props: any) {
 
     return (
         <div>
-            <div>
-                <Box className="box" component="span" sx={{ p: 1, border: '1px solid #91959C' }}>
-                    <label onClick={onChangeDecrement}>-</label>
-                </Box>
-                <Box className="box" component="span" sx={{ p: 1, border: '1px solid #91959C' }}>
-                    <label>{quantity}</label>
-                </Box>
-                <Box className="box" component="span" sx={{ p: 1, border: '1px solid #91959C' }}>
-                    <label onClick={onChangeIncrement}>+</label>
-                </Box>
+            <div className="aem-Grid aem-Grid--12">
+                <div className="aem-GridColumn aem-GridColumn--default--1">
+                    <div>
+                        <div className="quantity-dec">
+                            <img className="quantity-logo" src={minuscircle} onClick={onChangeDecrement}></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="aem-GridColumn aem-GridColumn--default--2">
+                    <div className="box-quantity">
+                        <div className="box-span">
+                            <span className="quantity-span">{quantity}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="aem-GridColumn aem-GridColumn--default--1">
+                    <div>
+                        <div className="quantity-inc">
+                            <img className="quantity-logo" src={pluscircle} onClick={onChangeIncrement}></img>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
