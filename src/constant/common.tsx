@@ -3,7 +3,12 @@ import color2 from '../assests/images/color2.png';
 import color3 from '../assests/images/color3.png';
 import color4 from '../assests/images/color4.png';
 
-export const STYLE = ['Outdoor', 'Casual', 'Athleisuve', 'Running', 'Active']
+export const STYLE = [
+    { id: "1", value: "women's clothing", filterLabel: "Women's clothing" },
+    { id: "2", value: "men's clothing", filterLabel: "Men's clothing" },
+    { id: "3", value: "jewelery", filterLabel: 'Jewelery' },
+    { id: "4", value: "electronics", filterLabel: 'Electronics' },
+]
 
 export const BRAND = ['Calvin klein', 'Dolee & Gabbana', 'Miu Miu', 'Prada', 'Rag &  Bone', 'Gucci', 'Chanel', 'Salotore Ferrogamo',
     'Mami', 'Dior']
@@ -25,7 +30,6 @@ export const SIZE = [
     { id: 5, img: 'XL', value: 'X-Large' },
     { id: 6, img: 'XXL', value: 'XX-Large' },
 ]
-
 
 export const ACCORDIAN = [
     { id: 1, typo1: 'Estimate your Shipping', typo2: 'Shipping to 91001', typo3: ' Shipping Details', panel: 'panel1' },

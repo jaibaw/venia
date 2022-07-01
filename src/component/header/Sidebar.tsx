@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { action_fetchProductByCategory } from '../../actions/get-products';
 import { SIZE, STYLE, BRAND } from "../../constant/common";
 import Color from '../common/Color';
 
 function Sidebar() {
-    const [checked, setChecked] = React.useState(true);
+    const dispatch = useDispatch();
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setChecked(event.target.checked);
+    const [checked, setChecked] = useState(false);
+
+
+    const handleFilterChange = (e: any) => {
+        setChecked(true);
+        dispatch(action_fetchProductByCategory(e.target.value));
+        setChecked(false);
     };
 
     return (
@@ -40,9 +47,17 @@ function Sidebar() {
                         {STYLE.map(function (key) {
                             return (
                                 <div>
-                                    <input className='chechbox-resize' type="checkbox" id="key" name="key" value={key}>
+                                    <input
+                                        className='chechbox-resize'
+                                        type="checkbox"
+                                        id={(key.id)}
+                                        name="key"
+                                        value={key.value}
+                                        onClick={handleFilterChange}
+                                        // checked={checked}
+                                    >
                                     </input>
-                                    <label className='checkbox-span'>{key}</label>
+                                    <label className='checkbox-span'>{key.filterLabel}</label>
                                     <br></br>
                                 </div>
                             );

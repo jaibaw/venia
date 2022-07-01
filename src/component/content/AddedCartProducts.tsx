@@ -18,22 +18,25 @@ function AddedCartProducts() {
                         </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--3">
-                        <div>
-                            <label className='added-cart-item-span'> {singleProductDetail.title}</label>
+                        <div className='added-product-detail'>
+                            <div>
+                                <label className='added-cart-item-span'> {singleProductDetail.title}</label>
+                            </div>
+                            <div>
+                                <label> Size : Medium</label>
+                            </div>
+                            <div>
+                                <label> Color : Black</label>
+                            </div>
+                            <div>
+                                <label>${singleProductDetail.price}</label>
+                            </div>
                         </div>
-                        <div>
-                            <label> Size : Medium</label>
-                        </div>
-                        <div>
-                            <label> Color : Black</label>
-                        </div>
-                        <div>
-                            <label>{singleProductDetail.price}</label>
-                        </div>
-
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--4">
-                        <Quantity />
+                        <div className='added-product-quantity'>
+                            <Quantity />
+                        </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--3">
                         <EditMenu />

@@ -17,32 +17,14 @@ function Quantity(props: any) {
     }
 
     return (
-        <div>
-            <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--1">
-                    <div>
-                        <div className="quantity-dec">
-                            <img className="quantity-logo" src={minuscircle} onClick={onChangeDecrement}></img>
-                        </div>
-                    </div>
-                </div>
+        <div className="quantity-container">
+            <span>{<img className="quantity-logo-minus" src={minuscircle} onClick={onChangeDecrement}></img>
+            }</span>
 
-                <div className="aem-GridColumn aem-GridColumn--default--2">
-                    <div className="box-quantity">
-                        <div className="box-span">
-                            <span className="quantity-span">{quantity}</span>
-                        </div>
-                    </div>
-                </div>
+            <span className="quantity-span">{quantity}</span>
 
-                <div className="aem-GridColumn aem-GridColumn--default--1">
-                    <div>
-                        <div className="quantity-inc">
-                            <img className="quantity-logo" src={pluscircle} onClick={onChangeIncrement}></img>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <span>{<img className="quantity-logo-plus" src={pluscircle} onClick={onChangeIncrement}></img>
+            }</span>
         </div>
     );
 }

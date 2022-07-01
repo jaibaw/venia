@@ -32,29 +32,23 @@
  }
 
  // quantity
- .box-quantity {
-     width: 110px;
-     height: 35px;
-     border: 2px solid #91959C;
-     border-radius: 6px;
- }
-
- .quantity-dec {
-     margin-top: 5px;
-     margin-left: 30px;
- }
-
- .quantity-inc {
-     margin-top: 4px;
- }
-
- .quantity-logo {
+ .quantity-logo-minus {
      width: 20px;
      height: 20px;
+     margin-right: 10px;
+ }
+
+ .quantity-logo-plus {
+     width: 20px;
+     height: 20px;
+     margin-left: 10px;
  }
 
  .quantity-span {
-     margin: 3px 0px 0px 40px;
+     padding: 5px 35px 5px 35px;
+     border: 2px solid #91959C;
+     border-radius: 8px;
+     opacity: 1;
  }
 
  //Accordian
@@ -63,6 +57,21 @@
  }
 
  .accordian-typo2-span {
-    font: normal normal normal 14px/21px Muli;
-    margin-left: 50%;
+     font: normal normal normal 14px/21px Muli;
+     margin-left: 50%;
+ }
+
+ //Edit Menu
+ .edit-icons {
+     width: 16px;
+     height: 16px;
+     margin-right: 4%;
+ }
+
+ .edit-icon-span {
+     font: normal normal 600 11px/13px Muli;
+ }
+
+ .edit-icon-container {
+     margin-top: 20px;
  }
