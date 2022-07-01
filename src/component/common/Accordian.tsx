@@ -2,7 +2,6 @@ import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { ACCORDIAN } from '../../constant/common';
 
@@ -24,15 +23,15 @@ export default function ControlledAccordions() {
               aria-controls="panel1bh-content"
               id="panel1bh-header"
             >
-              <span>
+              <span className='accordian-typo1-span'>
                 {key.typo1}
               </span>
-              <span>
+              <span className='accordian-typo2-span'>
                 {key.typo2}
               </span>
             </AccordionSummary>
             <AccordionDetails>
-              <span>
+              <span className='accordian-typo1-span'>
                 {key.typo3}
               </span>
             </AccordionDetails>

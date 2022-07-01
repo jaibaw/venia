@@ -4,21 +4,31 @@ import RecentlyViewCartProduct from '../component/content/RecentlyViewCartProduc
 
 function ShoppingCart() {
     return (
-        <div>
-            <div className="aem-Grid aem-Grid--12">
-                <h2>
-                    Your Shopping Bag
-                </h2>
-                <div className="aem-GridColumn aem-GridColumn--default--7">
-                    <AddedCartProducts />
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--5">
-                    <PriceSummary />
+        <div className='shopping-cart-container'>
+            <div className='shopping-cart-sub-container'>
+                <div className="aem-Grid aem-Grid--12">
+                    <div className='shopping-cart-title'>
+                        <span className='shopping-cart-title-span'>
+                            Your Shopping Bag
+                        </span>
+                    </div>
+                    <div className="aem-GridColumn aem-GridColumn--default--8">
+                        <AddedCartProducts />
+                    </div>
+                    <div className="aem-GridColumn aem-GridColumn--default--4">
+                        <PriceSummary />
+                    </div>
                 </div>
             </div>
-            <div className="aem-Grid aem-Grid--12">
-                <h2>Recently Viewed</h2>
-                <RecentlyViewCartProduct />
+            <div>
+                <div className="aem-Grid aem-Grid--12">
+                    <div className='shopping-cart-title'>
+                        <span className='shopping-cart-title-span'>
+                            Recently Viewed
+                        </span>
+                    </div>
+                    <RecentlyViewCartProduct />
+                </div>
             </div>
         </div>
     );

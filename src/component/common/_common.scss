@@ -1,17 +1,11 @@
  // Breadcrum
  .span-beadcrum {
      text-transform: capitalize;
-
      /* UI Properties */
-     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/14px var(--unnamed-font-family-muli);
-     letter-spacing: var(--unnamed-character-spacing-0);
-     color: var(--gray-d2);
-     text-align: left;
-     font: normal normal normal 20px/14px Muli;
+     font: normal normal normal 18px/12px Muli;
      letter-spacing: 0px;
      color: #181C24;
      opacity: 1;
-     ;
  }
 
  .breadcrum-container {
@@ -23,12 +17,6 @@
      width: 64px;
      height: 40px;
      margin-top: 5px;
- }
-
- //price summary
- .price-summary-imgs {
-     width: 244px;
-     height: 38px;
  }
 
  //size 
@@ -52,7 +40,7 @@
  }
 
  .quantity-dec {
-      margin-top: 5px;
+     margin-top: 5px;
      margin-left: 30px;
  }
 
@@ -65,6 +53,16 @@
      height: 20px;
  }
 
- .quantity-span{
-    margin: 3px 0px 0px 40px;  
+ .quantity-span {
+     margin: 3px 0px 0px 40px;
+ }
+
+ //Accordian
+ .accordian-typo1-span {
+     font: normal normal normal 18px/22px Muli;
+ }
+
+ .accordian-typo2-span {
+    font: normal normal normal 14px/21px Muli;
+    margin-left: 50%;
  }

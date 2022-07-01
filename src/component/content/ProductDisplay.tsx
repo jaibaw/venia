@@ -12,8 +12,6 @@ let PageSize = 10;
 function ProductDisplay() {
     const dispatch = useDispatch();
 
-    const [currentPage, setCurrentPage] = useState(1);
-
     const List = useSelector((state: any) => state.getProductList.getProductList);
 
     const onProductClick = (e: any) => {
