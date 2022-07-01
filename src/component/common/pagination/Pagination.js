@@ -1,9 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-import { DOTS } from '../pagination/UsePagination';
-import { usePagination } from '../pagination/UsePagination';
+import { usePagination, DOTS } from '../../common/pagination/UsePagination';
 
-function Pagination(props: any) {
+const Pagination = props => {
   const {
     onPageChange,
     totalCount,
@@ -13,16 +12,19 @@ function Pagination(props: any) {
     className
   } = props;
 
+  
+  console.log("paginationRange--000",onPageChange ,totalCount ,siblingCount ,pageSize , currentPage ,className)
 
-  const paginationRange = usePagination(
+  const paginationRange = usePagination({
     currentPage,
     totalCount,
     siblingCount,
     pageSize
-  );
+  });
 
+  console.log("paginationRange",paginationRange ,currentPage ,totalCount ,siblingCount ,pageSize)
 
-  if (currentPage === 0 || (paginationRange && paginationRange.length < 2)) {
+  if (currentPage === 0 || paginationRange.length < 2) {
     return null;
   }
 
@@ -34,8 +36,7 @@ function Pagination(props: any) {
     onPageChange(currentPage - 1);
   };
 
-  let lastPage = paginationRange && paginationRange[paginationRange.length - 1];
-       
+  let lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul
       className={classnames('pagination-container', { [className]: className })}
@@ -48,7 +49,7 @@ function Pagination(props: any) {
       >
         <div className="arrow left" />
       </li>
-      {paginationRange && paginationRange.map((pageNumber: any) => {
+      {paginationRange.map(pageNumber => {
         if (pageNumber === DOTS) {
           return <li className="pagination-item dots">&#8230;</li>;
         }

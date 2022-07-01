@@ -1,15 +1,11 @@
-import CircularProgress from "@mui/material/CircularProgress";
-import React from "react"
+import Spinner from "react-spinner-material";
 
-function Loader(props: any) {
+const Loader = (props: any) => {
     return (
-        <>
-            {props.status} ?
-            <CircularProgress /> :
-            {}
-        </>
-    )
-}
-
+        <div >
+            <Spinner radius={100} color={"#333"} stroke={4} visible={props.loader} />
+        </div>
+    );
+};
 
 export default Loader;

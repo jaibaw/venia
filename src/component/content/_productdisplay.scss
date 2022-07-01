@@ -34,9 +34,16 @@
 
 }
 
-.product-display-img-div{
+.product-display-img-div {
     border: aliceblue 1px solid;
     box-shadow: 0px 0px 8px #0000000D;
-    // padding-top: 20px;
-    // padding-bottom: 20px;
+}
+
+.product-dispaly-sub-container {
+    height: 125rem;
+}
+
+.pagination {
+    margin-right: 30%;
+    padding-bottom: 8%;
 }

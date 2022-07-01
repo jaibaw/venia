@@ -18,7 +18,6 @@ function App() {
     dispatch(action_fetchProductList());
   }, []);
 
-
   return (
     <>
       <div>

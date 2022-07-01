@@ -5,8 +5,10 @@ import Appbar from '../component/header/Appbar';
 import Banner from '../component/header/Banner';
 import Sidebar from '../component/header/Sidebar';
 import ProductDisplay from '../component/content/ProductDisplay';
+import Loader from '../component/common/Loader';
 
 function ProductList() {
+
     return (
         <div className='product-list-container'>
             <Banner />

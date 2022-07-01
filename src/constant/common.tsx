@@ -38,11 +38,11 @@ export const ACCORDIAN = [
 ]
 
 export const FILTER = [
-    { id: 1, value: "women's clothing", filterLabel: "Women's clothing" },
-    { id: 2, value: "men's clothing", filterLabel: "Men's clothing" },
-    { id: 3, value: "jewelery", filterLabel: 'Jewelery' },
-    { id: 4, value: "electronics", filterLabel: 'Electronics' },
-    { id: 5, value: "desc", filterLabel: 'Low to High Price' },
-    { id: 6, value: "asc", filterLabel: 'High to Low Price' },
-
+    { id: 1, value: "desc", filterLabel: 'Low to High Price' },
+    { id: 2, value: "asc", filterLabel: 'High to Low Price' },
+    { id: 3, value: "women's clothing", filterLabel: "Women's clothing" },
+    { id: 4, value: "men's clothing", filterLabel: "Men's clothing" },
+    { id: 5, value: "jewelery", filterLabel: 'Jewelery' },
+    { id: 6, value: "electronics", filterLabel: 'Electronics' },
+ 
 ]
