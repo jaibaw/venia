@@ -1,5 +1,6 @@
 import Spinner from "react-spinner-material";
 
+// loader while data fetching
 const Loader = (props: any) => {
     return (
         <div >

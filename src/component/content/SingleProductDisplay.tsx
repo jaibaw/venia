@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { IMG_CONST_VALUE } from '../../constant/common';
 
-
+// single product display
 function SingleProductDisplay() {
+    // redux state
     const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
 
+    // return component
     return (
         <div>
             <div className="aem-Grid aem-Grid--12">
@@ -27,8 +28,10 @@ function SingleProductDisplay() {
                     }
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--9'>
-                    <img className='product-display' src={singleProductDetail.image}>
-                    </img>
+                    <div>
+                        <img className='product-display' src={singleProductDetail.image}>
+                        </img>
+                    </div>
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12">

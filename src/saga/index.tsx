@@ -5,7 +5,6 @@ export default function* rootSaga() {
 	yield all(
 		[
             getProductList()
-		//	workbookSaga(),
 		]
 	)
 }

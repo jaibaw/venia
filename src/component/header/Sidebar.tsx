@@ -4,18 +4,20 @@ import { action_fetchProductByCategory } from '../../actions/get-products';
 import { SIZE, STYLE, BRAND } from "../../constant/common";
 import Color from '../common/Color';
 
+//sidebar
 function Sidebar() {
     const dispatch = useDispatch();
-
+    //local state
     const [checked, setChecked] = useState(false);
 
-
+    //fetch data based on slection of dropdown
     const handleFilterChange = (e: any) => {
         setChecked(true);
         dispatch(action_fetchProductByCategory(e.target.value));
         setChecked(false);
     };
 
+    //return component
     return (
         <div className='sidebar-container'>
             <div className="aem-Grid aem-Grid--12">
@@ -54,7 +56,7 @@ function Sidebar() {
                                         name="key"
                                         value={key.value}
                                         onClick={handleFilterChange}
-                                        // checked={checked}
+                                    // checked={checked}
                                     >
                                     </input>
                                     <label className='checkbox-span'>{key.filterLabel}</label>

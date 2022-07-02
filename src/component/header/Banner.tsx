@@ -7,15 +7,17 @@ import Breadcrum from '../common/Breadcrum';
 import { FILTER } from '../../constant/common';
 import { action_fetchProductByCategory, action_sortProductPrice } from '../../actions/get-products';
 
-
+//banner
 function Banner() {
     const dispatch = useDispatch();
 
+    //local state
     const [filterValue, setFilterValue] = useState('');
 
+    //redux state
     const productList = useSelector((state: any) => state.getProductList.getProductList);
 
-
+    //fetch data based on slection of dropdown
     const filterChange = (e: any) => {
         setFilterValue(e.target.value);
         if ((e.target.value === 'desc') || (e.target.value === 'asc')) {
@@ -25,6 +27,7 @@ function Banner() {
         }
     }
 
+    //return component
     return (
         <div className="banner-container">
             <div className="aem-Grid aem-Grid--12">

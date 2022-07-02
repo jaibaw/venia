@@ -2,10 +2,15 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../constant/routes';
 
+//recently viewed products
 function RecentlyViewCartProduct() {
+    //redux state
     const productList = useSelector((state: any) => state.getProductList.getProductList);
+    
+    //temp : hardcoded-showing 4 products
     const recentViewList = productList.slice(0, 4);
 
+    //return component
     return (
         <div className='product-display-list-container'>
             <div className="aem-Grid aem-Grid--12">

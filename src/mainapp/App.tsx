@@ -9,8 +9,10 @@ import { lazy, Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { action_fetchProductList } from "../actions/get-products";
 
+//lazy loading
 const ProductList = lazy(() => import('../container/ProductList'))
 
+// main app loading
 function App() {
   const dispatch = useDispatch();
 

@@ -5,14 +5,18 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { ACCORDIAN } from '../../constant/common';
 
+// accordian component
 export default function ControlledAccordions() {
+  //local state
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
+  //handle on click change
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
 
+  //return component
   return (
     <div>
       {

@@ -1,5 +1,6 @@
 import { COLOR } from '../../constant/common';
 
+//color component
 function Color() {
     return (
         <div>

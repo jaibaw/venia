@@ -3,6 +3,8 @@ import color2 from '../assests/images/color2.png';
 import color3 from '../assests/images/color3.png';
 import color4 from '../assests/images/color4.png';
 
+export const PAGE_SIZE = 15;
+
 export const STYLE = [
     { id: "1", value: "women's clothing", filterLabel: "Women's clothing" },
     { id: "2", value: "men's clothing", filterLabel: "Men's clothing" },

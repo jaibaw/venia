@@ -1,13 +1,13 @@
-import React, { Suspense, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
 import SingleProductDetails from '../component/content/SingleProductDetails';
 import SingleProductDisplay from '../component/content/SingleProductDisplay';
 
+// product details container
 function ProductDetail() {
-
+    //return component
     return (
         <div className='product-detail-container'>
             <div className="aem-Grid aem-Grid--12">
+
                 <div className='aem-GridColumn aem-GridColumn--default--5'>
                     <SingleProductDisplay />
                 </div>

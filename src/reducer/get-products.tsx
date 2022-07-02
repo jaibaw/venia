@@ -3,7 +3,8 @@ import { ActionTypes } from "../constant/actions";
 const initialState = {
     getProductList: [],
     singleProductDetail: {},
-
+    setQuantity: '1',
+    setCartQuantity: '',
 };
 
 export const getProductListReducer = (state: any = initialState, action: any) => {
@@ -37,6 +38,20 @@ export const getProductListReducer = (state: any = initialState, action: any) =>
             return {
                 ...state,
                 getProductList: action.payload
+            };
+
+        // set the product quanity based on increment and decerement
+        case ActionTypes.GET_PRODUCTS.SET_PRODUCT_QUANTITY:
+            return {
+                ...state,
+                setQuantity: action.payload
+            };
+
+        // get the cart quantity
+        case ActionTypes.GET_PRODUCTS.SET_CART_QUANTITY:
+            return {
+                ...state,
+                setCartQuantity: action.payload
             };
 
         default:

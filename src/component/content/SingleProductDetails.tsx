@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Breadcrum from '../common/Breadcrum';
 import Color from '../common/Color';
 import Quantity from '../common/Quantity';
@@ -12,11 +12,22 @@ import Breathable from '../../assests/images/Breathable.png';
 import fabricdetails from '../../assests/images/fabricdetails.png';
 import Lightweightfabric from '../../assests/images/Lightweightfabric.png';
 import Sweatwicking from '../../assests/images/Sweatwicking.png';
+import { action_setCartQuantity } from "../../actions/get-products";
 
+//single product details
 function SingleProductDetails() {
+    const dispatch = useDispatch();
 
+    //redux state
     const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
 
+    // maintain cart quantity
+    const addTocart = () => {
+        //temp : added hardcode data
+        dispatch(action_setCartQuantity('1'));
+    }
+
+    //return product
     return (
         <div>
             <div className="aem-Grid aem-Grid--12">
@@ -63,7 +74,10 @@ function SingleProductDetails() {
                     <Quantity />
                 </div>
                 <div>
-                    <Link to={ROUTES.SHOPPING_CART}>{<img className="product-add-to-cart-logo" src={addtocart}></img>}</Link>
+                    {/* <Link to={ROUTES.SHOPPING_CART}>{<img className="product-add-to-cart-logo" src={addtocart}></img>}</Link> */}
+
+                    <img className="product-add-to-cart-logo" src={addtocart} onClick={addTocart}></img>
+
                 </div>
                 <div className="share-save-div">
                     <div className="aem-Grid aem-Grid--12">

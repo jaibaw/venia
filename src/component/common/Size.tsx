@@ -1,5 +1,6 @@
 import { SIZE } from "../../constant/common";
 
+//size component
 function Size() {
     return (
         <div>

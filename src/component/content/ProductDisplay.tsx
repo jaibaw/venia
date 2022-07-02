@@ -1,21 +1,22 @@
-import React, { Suspense, useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { action_fetchProductList, action_fetchSingleProduct } from '../../actions/get-products';
+import { action_fetchSingleProduct } from '../../actions/get-products';
 import heart from "../../assests/images/heart.svg";
 import Pagination from '../common/pagination/Pagination';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../constant/routes';
 import Loader from '../common/Loader';
+import { PAGE_SIZE } from '../../constant/common';
 
-let PageSize = 15;
-
-
+//product diaplay componenet
 function ProductDisplay() {
     const dispatch = useDispatch();
-    const [currentPage, setCurrentPage] = useState(1);
 
+    // maintain local state
+    const [currentPage, setCurrentPage] = useState(1);
     const [loader, setLoader] = useState(true);
 
+    //redux state
     const productList = useSelector((state: any) => state.getProductList.getProductList);
 
     useEffect(() => {
@@ -24,18 +25,21 @@ function ProductDisplay() {
         }
     }, [productList]);
 
-    const firstPageIndex = (currentPage - 1) * PageSize;
-    const lastPageIndex = firstPageIndex + PageSize;
+    // pagination
+    const firstPageIndex = (currentPage - 1) * PAGE_SIZE;
+    const lastPageIndex = firstPageIndex + PAGE_SIZE;
     const currentProductList = productList.slice(firstPageIndex, lastPageIndex);
 
+    //on product click dispatch single product detail
     const onProductClick = (e: any) => {
         dispatch(action_fetchSingleProduct(parseInt(e.target.id)));
     }
 
+    //return component
     return (
         <div className='product-display-list-container'>
             <div>
-                { loader && <Loader loader={loader} />}
+                {loader && <Loader loader={loader} />}
             </div>
             <div className='product-dispaly-sub-container'>
                 <div className="aem-Grid aem-Grid--12">
@@ -79,7 +83,7 @@ function ProductDisplay() {
                         className="pagination-bar"
                         currentPage={currentPage}
                         totalCount={productList && productList ? productList.length : 0}
-                        pageSize={PageSize}
+                        pageSize={PAGE_SIZE}
                         onPageChange={(page: any) => setCurrentPage(page)}
                     />
                 </div>

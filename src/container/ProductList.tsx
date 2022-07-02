@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import Footer from '../component/footer/Footer';
-import Appbar from '../component/header/Appbar';
 import Banner from '../component/header/Banner';
 import Sidebar from '../component/header/Sidebar';
 import ProductDisplay from '../component/content/ProductDisplay';
-import Loader from '../component/common/Loader';
 
+//product list
 function ProductList() {
 
     return (

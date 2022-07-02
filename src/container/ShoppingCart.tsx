@@ -2,6 +2,7 @@ import AddedCartProducts from '../component/content/AddedCartProducts';
 import PriceSummary from '../component/content/PriceSummary';
 import RecentlyViewCartProduct from '../component/content/RecentlyViewCartProduct';
 
+//shopping cart
 function ShoppingCart() {
     return (
         <div className='shopping-cart-container'>

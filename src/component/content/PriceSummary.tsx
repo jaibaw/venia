@@ -3,10 +3,13 @@ import paypal from "../../assests/images/paypal.png";
 import checkout from "../../assests/images/checkout.png";
 import { useSelector } from 'react-redux';
 
+//price summary product
 function PriceSummary(props: any) {
-
+    //redux state
     const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
-
+    const setQuantity = useSelector((state: any) => state.getProductList.setQuantity);
+    
+    // return component
     return (
         <div className='price-summary-container'>
             <div className='price-summary-title'>
@@ -38,7 +41,7 @@ function PriceSummary(props: any) {
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--3">
                     <div className='price-summary-sub-title'>
-                        <label>${singleProductDetail.price * 4}</label>
+                        <label>${singleProductDetail.price *  parseInt(setQuantity)}</label>
                     </div>
                     <div className='price-summary-sub-title'>
                         <label>-${35.43}</label>

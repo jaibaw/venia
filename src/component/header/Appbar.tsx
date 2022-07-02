@@ -4,8 +4,14 @@ import user from '../../assests/images/user.svg';
 import archive from '../../assests/images/archive.svg';
 import { ROUTES } from '../../constant/routes';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
+//appbar
 function Appbar() {
+    //redux state
+    const setCartQuantity = useSelector((state: any) => state.getProductList.setCartQuantity);
+
+    //return component
     return (
         <div className='header-container'>
             <section className="header">
@@ -31,14 +37,12 @@ function Appbar() {
                                 <img src={user}></img>
                                 <li className='list-class'> Sign in</li>
 
-                                <Link to={ROUTES.SHOPPING_CART}> {1} {<img src={archive}></img>}</Link>
+                                <Link to={ROUTES.SHOPPING_CART}> {setCartQuantity} {<img src={archive}></img>}</Link>
                             </ul>
                         </div>
-
                     </nav>
                 </header>
             </section>
-
         </div>
     );
 }

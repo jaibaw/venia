@@ -3,10 +3,12 @@ import SimpleAccordion from '../common/Accordian';
 import EditMenu from '../common/EditMenu';
 import Quantity from '../common/Quantity';
 
+// added products in cart
 function AddedCartProducts() {
-
+    //redux state
     const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
 
+    //return component
     return (
         <div className='added-item-cart-container'>
             <div>

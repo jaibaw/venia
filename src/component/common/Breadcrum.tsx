@@ -1,5 +1,6 @@
 import { Breadcrumbs, Link } from "@mui/material";
 
+// braedcrum component
 function Breadcrum(props: any) {
     return (
         <div className="breadcrum-container">
