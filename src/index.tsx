@@ -5,17 +5,17 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../src/mainapp/index.scss";
 import App from "./mainapp/App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 const store = configStore();
 
 export default function Wrapper() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <App />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

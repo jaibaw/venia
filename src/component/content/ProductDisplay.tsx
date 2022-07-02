@@ -74,7 +74,7 @@ function ProductDisplay() {
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12">
-                <div className=''>
+                <div className='pagination'>
                     <Pagination
                         className="pagination-bar"
                         currentPage={currentPage}
