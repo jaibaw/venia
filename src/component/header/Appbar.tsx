@@ -37,7 +37,11 @@ function Appbar() {
                                 <img src={user}></img>
                                 <li className='list-class'> Sign in</li>
 
-                                <Link to={ROUTES.SHOPPING_CART}> {setCartQuantity} {<img src={archive}></img>}</Link>
+                                {
+                                     setCartQuantity ?
+                                        <Link to={ROUTES.SHOPPING_CART}> {setCartQuantity} {<img src={archive}></img>}</Link>
+                                        : <img src={archive}></img>
+                                }
                             </ul>
                         </div>
                     </nav>
