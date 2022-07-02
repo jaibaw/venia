@@ -1,7 +1,7 @@
 {
-  "name": "adobe",
+  "homepage": "https://jaibaw.github.io/venia",
+  "name": "venia",
   "version": "0.1.0",
-  "homepage": "https://github.com/jaibaw/jaishree.bawaskar-e-zest.in.git",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
