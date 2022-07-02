@@ -12,7 +12,7 @@ function Appbar() {
                 <header>
                     <nav className="aem-Grid aem-Grid--12">
                         <div className="aem-GridColumn aem-GridColumn--default--2 logo">
-                        <Link to={ROUTES.PRODUCT_LIST}>{<img className='venia-logo' src={venia_logo}></img>}</Link>
+                            <Link to={ROUTES.PRODUCT_LIST}>{<img className='venia-logo' src={venia_logo}></img>}</Link>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--hide aem-GridColumn--phone--hide main_menus">
                             <ul className='menu-class'>
@@ -31,8 +31,7 @@ function Appbar() {
                                 <img src={user}></img>
                                 <li className='list-class'> Sign in</li>
 
-
-                                <img src={archive}></img>
+                                <Link to={ROUTES.SHOPPING_CART}> {1} {<img src={archive}></img>}</Link>
                             </ul>
                         </div>
 

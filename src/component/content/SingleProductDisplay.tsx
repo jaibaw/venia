@@ -49,6 +49,9 @@ function SingleProductDisplay() {
                 </div>
             </div>
 
+            <div className='end-border'>
+
+            </div>
         </div>
     );
 }
