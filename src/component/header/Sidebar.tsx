@@ -20,7 +20,7 @@ function Sidebar() {
     //return component
     return (
         <div className='sidebar-container'>
-            <div className="aem-Grid aem-Grid--12">
+            <div className="aem-Grid aem-Grid--12" >
                 <div className='attr'>
                     <span className='sidebar-span'>Filters</span>
                 </div>

@@ -19,7 +19,11 @@ function SingleProductDetails() {
     const dispatch = useDispatch();
 
     //redux state
-    const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
+    const productDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
+
+    //maintain state on refresh 
+    const Product = window.localStorage.getItem('data');
+    const singleProductDetail = (Object.keys(productDetail).length > 0) ? productDetail : (Product ? JSON.parse(Product) : {})
 
     // maintain cart quantity
     const addTocart = () => {

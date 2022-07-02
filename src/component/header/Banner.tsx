@@ -16,7 +16,7 @@ function Banner() {
 
     //redux state
     const productList = useSelector((state: any) => state.getProductList.getProductList);
-
+    
     //fetch data based on slection of dropdown
     const filterChange = (e: any) => {
         setFilterValue(e.target.value);
@@ -31,11 +31,11 @@ function Banner() {
     return (
         <div className="banner-container">
             <div className="aem-Grid aem-Grid--12">
-                <div className='aem-GridColumn aem-GridColumn--default--5'>
+                <div className='aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12'>
                     <img className="women-block" src={womensblock}>
                     </img>
                 </div>
-                <div className='aem-GridColumn aem-GridColumn--default--7'>
+                <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12'>
                     <img className="man-play" src={manplay}>
                     </img>
                 </div>
@@ -43,8 +43,8 @@ function Banner() {
 
             {/* Breadcrum menus */}
             <div className='banner-sub-container'>
-                <div className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--3">
+                <div className="aem-Grid aem-Grid--12 " >
+                    <div className="aem-GridColumn aem-GridColumn--default--3 ">
                         <Breadcrum
                             label={filterValue}
                         />

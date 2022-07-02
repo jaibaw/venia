@@ -1,11 +1,17 @@
 .product-display {
     width: 400px;
-    height: 600px;
+    height: 580px;
     border: aliceblue 1px solid;
     padding: 10px 10px 10px 10px;
     margin-bottom: 49px;
     /* UI Properties */
     opacity: 1;
+}
+
+.single-img-display {
+    width: 380px;
+    height: 453px;
+    padding: 20px 20px 20px 20px;
 }
 
 .side-product-display {
@@ -16,7 +22,7 @@
 }
 
 .side-product-div {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .product-title-span {

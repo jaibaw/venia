@@ -20,7 +20,7 @@ function Appbar() {
                         <div className="aem-GridColumn aem-GridColumn--default--2 logo">
                             <Link to={ROUTES.PRODUCT_LIST}>{<img className='venia-logo' src={venia_logo}></img>}</Link>
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--hide aem-GridColumn--phone--hide main_menus">
+                        <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--hide aem-GridColumn--phone--hide">
                             <ul className='menu-class'>
                                 <li className='list-class-women'>Women</li>
                                 <li className='list-class'>Men</li>
@@ -29,7 +29,7 @@ function Appbar() {
                             </ul>
                         </div>
 
-                        <div className="aem-GridColumn aem-GridColumn--default--3 right_nav">
+                        <div className="aem-GridColumn aem-GridColumn--default--3">
                             <ul className='menu-class'>
                                 <img src={search}></img>
                                 <li className='list-class'>Search</li>
