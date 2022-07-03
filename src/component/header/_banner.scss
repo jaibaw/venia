@@ -35,3 +35,24 @@
     width: 260px;
     height: 44px;
 }
+
+
+/*=== Mobile Media ===*/
+@media (max-width:320px) {
+    .women-block {
+        width: 570px;
+        height: max-content;
+        margin-bottom: 20px;
+        padding-top: 20%;
+        position: sticky;
+        margin-left: 5%;
+    }
+
+    .man-play {
+        width: 700px;
+        height: 320px;
+        margin-left: 6px;
+        margin-top: -77%;
+    }
+
+}

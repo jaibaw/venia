@@ -11,7 +11,7 @@ function ProductList() {
         <div className='product-list-container'>
             <Banner />
             <div className="aem-Grid aem-Grid--12">
-                <div className='aem-GridColumn aem-GridColumn--default--3'>
+                <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide'>
                     <Sidebar />
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--9'>

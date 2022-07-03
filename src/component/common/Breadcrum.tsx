@@ -3,13 +3,14 @@ import { useSelector } from "react-redux";
 
 // braedcrum component
 function Breadcrum(props: any) {
+    //redux state
     const productDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
 
     return (
         <div className="breadcrum-container">
             <Breadcrumbs>
                 <Link>
-                    <span className="span-beadcrum"> Clothing</span>
+                    <span className="span-beadcrum"> Category</span>
                 </Link>
                 <Link>
                     {

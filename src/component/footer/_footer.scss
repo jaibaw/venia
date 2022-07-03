@@ -13,13 +13,13 @@
 .footer-main-container {
     padding: 30px 0px 0px 0pc;
     border-top: #eceeef 3px solid;
-    border-bottom: #eceeef 3px solid;
-    height: 211px;
+    //   border-bottom: #eceeef 3px solid;
+    height: max-content;
 }
 
 .footer-sub-container {
     width: 293px;
-    height: 125px;
+    height: max-content;
     /* UI Properties */
     opacity: 1;
 }
@@ -67,6 +67,8 @@
 
 .footer-copy-right-container {
     padding: 27px 0px 27px 0px;
+    border-top: #eceeef 3px solid;
+ 
 }
 
 .footer-social-media-logo {

@@ -45,7 +45,7 @@ function ProductDisplay() {
                 <div className="aem-Grid aem-Grid--12">
                     {currentProductList && currentProductList.map(function (key: any) {
                         return (
-                            <div className="aem-GridColumn aem-GridColumn--default--4">
+                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6">
                                 <div className='product-display-container'>
                                     <div className='product-display-img-div'>
                                         <Link to={ROUTES.PRODUCT_DETAILS}>
@@ -69,7 +69,6 @@ function ProductDisplay() {
                                         <div>
                                             <img src={heart}></img>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
