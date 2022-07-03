@@ -44,7 +44,6 @@ function* get_Productt_By_Category(action: any): any {
 function* get_Single_ProductDetail(action: any): any {
     try {
         const response = yield call(get_singleProductDetail, action.payload);
-        console.log("re", response);
         if (response != undefined) {
             window.localStorage.setItem('data', JSON.stringify(response))
             yield put({

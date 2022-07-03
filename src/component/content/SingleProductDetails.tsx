@@ -6,13 +6,14 @@ import Size from '../common/Size';
 import share from "../../assests/images/share.svg";
 import heart from "../../assests/images/heart.svg";
 import addtocart from "../../assests/images/addtocart.png";
-import { Link } from 'react-router-dom';
-import { ROUTES } from '../../constant/routes';
 import Breathable from '../../assests/images/Breathable.png';
 import fabricdetails from '../../assests/images/fabricdetails.png';
 import Lightweightfabric from '../../assests/images/Lightweightfabric.png';
 import Sweatwicking from '../../assests/images/Sweatwicking.png';
 import { action_setCartQuantity } from "../../actions/get-products";
+
+import { Rating } from 'react-simple-star-rating'
+import StarRating from "../common/StarRating";
 
 //single product details
 function SingleProductDetails() {
@@ -50,8 +51,9 @@ function SingleProductDetails() {
                 </div>
 
                 <div>
+                    <StarRating rating={singleProductDetail.rating.rate * 20} />
                     <label className="product-rating-span">
-                        {singleProductDetail.rating ? singleProductDetail.rating.rate : ""} {singleProductDetail.rating ? singleProductDetail.rating.count : ""}
+                        ({singleProductDetail.rating.count})
                     </label>
                 </div>
                 <div className="product-discription-details">
