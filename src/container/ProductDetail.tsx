@@ -6,12 +6,12 @@ function ProductDetail() {
     //return component
     return (
         <div className='product-detail-container'>
-            <div className="aem-Grid aem-Grid--12">
+            <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">
 
-                <div className='aem-GridColumn aem-GridColumn--default--5'>
+                <div className='aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12'>
                     <SingleProductDisplay />
                 </div>
-                <div className='aem-GridColumn aem-GridColumn--default--7'>
+                <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12'>
                     <div className='product-detail-sub-container'>
                         <SingleProductDetails />
                     </div>
