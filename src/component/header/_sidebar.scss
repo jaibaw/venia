@@ -54,3 +54,59 @@
 .attr-bottom {
     padding-bottom: 25px;
 }
+
+.close-log {
+    display: none;
+}
+
+//Mobile View
+@media (min-width: 320px) and (max-width: 767px) {
+    .sidebar-container {
+        width: 540%;
+        height: max-content;
+        margin-top: -34%;
+        margin-left: 185px;
+        border: 2px solid #91959C;
+        box-shadow: 0px 8px 16px #00000026;
+    }
+
+    .attr {
+        width: auto;
+        padding-bottom: 4%;
+        padding-left: 5%;
+    }
+
+    .sidebar-span {
+        font: normal normal normal 36px/42px Muli;
+        color: #1D1D1B;
+    }
+
+    .checkbox-span {
+        width: 70%;
+        font: normal normal normal 28px/38px Muli;
+    }
+
+    .chechbox-resize {
+        width: 35px;
+        height: 35px;
+        margin: 17px 40px 25px 0px;
+        padding-top: 23px;
+    }
+
+    .sidebar-span-div {
+        padding: 4% 0% 4% 0%;
+    }
+
+    .filter-title-div {
+        width: auto;
+        padding: 3% 0% 4% 5%;
+        background: ghostwhite;
+    }
+
+    .close-log {
+        margin-left: 75%;
+        width: 35px;
+        display: block;
+        margin-top: -3%;
+    }
+}

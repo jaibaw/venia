@@ -6,9 +6,12 @@ import ProductDisplay from '../component/content/ProductDisplay';
 
 //product list
 function ProductList() {
+    //redux state
+    const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
+
 
     return (
-        <div className='product-list-container'>
+        <div className={setMenuBarStatus ? 'display-list' : 'product-list-container'}     >
             <Banner />
             <div className="aem-Grid aem-Grid--12">
                 <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide'>

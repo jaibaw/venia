@@ -36,3 +36,9 @@ export const action_setCartQuantity = (payload: any) => ({
     payload,
     type: ActionTypes.GET_PRODUCTS.SET_CART_QUANTITY
 });
+
+// for mobile view  
+export const action_setMenuBarStatus = (payload: any) => ({
+    payload,
+    type: ActionTypes.GET_PRODUCTS.SET_MENUBAR_STATUS
+});

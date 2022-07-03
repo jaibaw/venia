@@ -4,10 +4,14 @@ import twitter from '../../assests/images/twitter.svg';
 import instagram from '../../assests/images/instagram.svg';
 import { ROUTES } from '../../constant/routes';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Footer() {
+    //redux state
+    const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
+
     return (
-        <div className='footer-container'>
+        <div className={setMenuBarStatus ? 'display-list' : 'footer-container'}    >
             <div className='footer-main-container'>
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">

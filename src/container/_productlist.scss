@@ -8,7 +8,6 @@
     opacity: 1;
 }
 
-
 /*=== Mobile Media ===*/
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -16,10 +15,9 @@
         height: max-content;
         opacity: 1;
         margin-left: -4%;
-
     }
 
-
-
-
+    .display-list {
+        display: none;
+    }
 }

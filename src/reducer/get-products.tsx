@@ -5,6 +5,7 @@ const initialState = {
     singleProductDetail: {},
     setQuantity: '1',
     setCartQuantity: '',
+    setMenuBarStatus : false
 };
 
 export const getProductListReducer = (state: any = initialState, action: any) => {
@@ -24,7 +25,6 @@ export const getProductListReducer = (state: any = initialState, action: any) =>
                 ...state,
                 getProductList: action.payload
             };
-
 
         // get the single product details
         case ActionTypes.GET_PRODUCTS.GET_SINGLE_PRODUCT_DATA_SUCCESS:
@@ -52,6 +52,14 @@ export const getProductListReducer = (state: any = initialState, action: any) =>
             return {
                 ...state,
                 setCartQuantity: action.payload
+            };
+
+
+        // set menu bar status
+        case ActionTypes.GET_PRODUCTS.SET_MENUBAR_STATUS:
+            return {
+                ...state,
+                setMenuBarStatus: action.payload
             };
 
         default:

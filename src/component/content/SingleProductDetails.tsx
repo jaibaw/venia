@@ -51,7 +51,7 @@ function SingleProductDetails() {
                 </div>
 
                 <div>
-                    <StarRating rating={singleProductDetail.rating.rate * 20} />
+                    <StarRating rating={singleProductDetail.rating.rate} />
                     <label className="product-rating-span">
                         ({singleProductDetail.rating.count})
                     </label>
