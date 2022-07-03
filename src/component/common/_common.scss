@@ -78,5 +78,27 @@
 
  //loader
  .react-spinner-material {
-      margin: 25% 35% 25% 35%;
+     margin: 25% 35% 25% 35%;
+ }
+
+ /*=== Mobile Media ===*/
+ @media (min-width: 320px) and (max-width: 767px) {
+     .breadcrum-container {
+         height: 45px;
+         margin-left: 13%;
+     }
+
+     .span-beadcrum {
+         text-transform: capitalize;
+         /* UI Properties */
+         font: normal normal normal 30px/40px Muli;
+         letter-spacing: 0px;
+         color: #181C24;
+         opacity: 1;
+     }
+
+     .react-spinner-material {
+        margin: 65% 65% 65% 65%;
+    }
+   
  }

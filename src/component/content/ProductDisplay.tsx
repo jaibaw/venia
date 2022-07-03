@@ -76,7 +76,7 @@ function ProductDisplay() {
                     })}
                 </div>
             </div>
-            <div className="aem-Grid aem-Grid--12">
+            <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">
                 <div className='pagination'>
                     <Pagination
                         className="pagination-bar"

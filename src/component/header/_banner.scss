@@ -9,9 +9,9 @@
 }
 
 .man-play {
-    width: 700px;
+    width: 91%;
     height: 320px;
-    margin-left: 6px;
+    margin-left: 3.5%;
     margin-top: 16px;
 }
 
@@ -36,23 +36,64 @@
     height: 44px;
 }
 
+.filter-sort-div {
+    display: none;
+}
 
 /*=== Mobile Media ===*/
-@media (max-width:320px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .women-block {
-        width: 570px;
+        width: 86%;
         height: max-content;
-        margin-bottom: 20px;
-        padding-top: 20%;
+        padding-top: 33%;
         position: sticky;
-        margin-left: 5%;
+        margin-left: 12%;
     }
 
     .man-play {
-        width: 700px;
-        height: 320px;
-        margin-left: 6px;
+        height: 702px;
         margin-top: -77%;
+        width: 103%;
+        margin-top: -136%;
     }
 
+    .banner-container {
+        margin-top: 0px;
+    }
+
+    .filter-sort-div {
+        display: block;
+        padding-left: 445px;
+        padding-bottom: 5%;
+    }
+
+    .filter-sort-sub-container {
+        padding-top: 6%;
+    }
+
+    .filter-sort-span {
+        font: normal normal normal bold 28px/35px Muli;
+    }
+
+    .filter-sort-logo {
+        width: 28px;
+        height: 35px;
+        margin-right: 3px;
+    }
+
+    .sort-logo {
+        width: 16px;
+        height: 35px;
+        margin-right: 3px;
+    }
+
+    .result-span {
+        /* margin-left: 4px; */
+        font: normal normal 600 30px/20px Muli;
+    }
+
+    .result-div {
+        margin-left: 50%;
+        margin-bottom: 3%;
+    }
 }

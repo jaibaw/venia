@@ -14,10 +14,10 @@ function Footer() {
                         <div className='footer-sub-container'>
                             <span className='footer-heading-span '>Account</span>
                             <ul className='footer-sub-heading-sapn'>
-                                <li >Women</li>
-                                <li >Men</li>
-                                <li >Smart Gear</li>
-                                <li >Accessories</li>
+                                <li className='footer-heading-listing-span' >Women</li>
+                                <li className='footer-heading-listing-span'>Men</li>
+                                <li className='footer-heading-listing-span'>Smart Gear</li>
+                                <li className='footer-heading-listing-span'>Accessories</li>
                             </ul>
                         </div>
                     </div>
@@ -25,10 +25,10 @@ function Footer() {
                         <div className='footer-sub-container'>
                             <span className='footer-heading-span '>About Us </span>
                             <ul className='footer-sub-heading-sapn'>
-                                <li>
+                                <li className='footer-heading-listing-span'>
                                     Our Story
                                 </li>
-                                <li>
+                                <li className='footer-heading-listing-span'>
                                     Carrers
                                 </li>
                             </ul>
@@ -39,13 +39,13 @@ function Footer() {
                         <div className='footer-sub-container'>
                             <span className='footer-heading-span '>Help</span>
                             <ul className='footer-sub-heading-sapn'>
-                                <li>
+                                <li className='footer-heading-listing-span'>
                                     Contact Us
                                 </li>
-                                <li>
+                                <li className='footer-heading-listing-span'>
                                     Order Status
                                 </li>
-                                <li>
+                                <li className='footer-heading-listing-span'>
                                     Return
                                 </li>
                             </ul>
@@ -54,9 +54,9 @@ function Footer() {
 
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
                         <div>
-                            <span className='footer-heading-span '>Follow Us!</span>
+                            <span className='footer-heading-span-follow'>Follow Us!</span>
                             <ul className='footer-sub-heading-sapn'>
-                                <li>
+                                <li className='footer-heading-listing-span'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                                 </li>
                                 <a href='https://www.instagram.com/'>
@@ -79,7 +79,9 @@ function Footer() {
                         <Link to={ROUTES.PRODUCT_LIST}>{<img className='footer-venia-logo' src={venia_logo}></img>}</Link>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-                        <span className='footer-copy-right-span'>© Company Name Address Ave, City Name, State ZIP</span>
+                        <div className='footer-copy-right-div'>
+                            <span className='footer-copy-right-span'>© Company Name Address Ave, City Name, State ZIP</span>
+                        </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
                         <div className='footer-term-policy-container'>

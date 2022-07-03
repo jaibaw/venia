@@ -68,11 +68,48 @@
 .footer-copy-right-container {
     padding: 27px 0px 27px 0px;
     border-top: #eceeef 3px solid;
- 
+
 }
 
 .footer-social-media-logo {
     width: 20px;
     height: 20px;
     margin-right: 20px;
+}
+
+.footer-heading-span-follow {
+    margin-left: 14%;
+    height: 20px;
+    /* UI Properties */
+    font: normal normal 600 16px/24px Muli;
+}
+
+/*=== Mobile Media ===*/
+@media (min-width: 320px) and (max-width: 767px) {
+    .footer-container {
+        margin-left: 5%;
+    }
+
+    .footer-heading-span {
+        font: normal normal 600 28px/40px Muli;
+    }
+
+    .footer-heading-listing-span {
+        font: normal normal 600 22px/40px Muli;
+    }
+
+    .footer-heading-span-follow {
+        margin-left: 35px;
+        font: normal normal 600 28px/40px Muli;
+    }
+
+    .footer-term-policy-container {
+        margin-left: 39%;
+        margin-top: -5%;
+    }
+
+    .footer-copy-right-div {
+        margin-left: 23%;
+        margin-top: 3%;
+    }
 }

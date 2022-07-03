@@ -31,7 +31,6 @@
     width: 265px;
     height: 370px;
     margin-bottom: 15px;
-
 }
 
 .product-display-img-div {
@@ -46,4 +45,34 @@
 .pagination {
     margin-right: 30%;
     padding-bottom: 8%;
+}
+
+/*=== Mobile Media ===*/
+@media (min-width: 320px) and (max-width: 767px) {
+    .product-display-list-container {
+        margin-left: 14%;
+        font: normal normal bold 25px Muli;
+    }
+
+    .product-dispaly-sub-container {
+        width: 74rem;
+        height: 386rem;
+    }
+
+    .product-display-img-div {
+        height: 572px;
+    }
+
+    .product-display-container {
+        width: 572px;
+        height: 760px;
+        margin-left: 20px
+    }
+
+    .product-img {
+        padding: 30px 15px 30px 30px;
+        width: 463px;
+        height: 520px;
+    }
+
 }
