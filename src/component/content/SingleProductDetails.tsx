@@ -80,17 +80,17 @@ function SingleProductDetails() {
                 <div>
                     {/* <Link to={ROUTES.SHOPPING_CART}>{<img className="product-add-to-cart-logo" src={addtocart}></img>}</Link> */}
 
-                    <img className="product-add-to-cart-logo" src={addtocart} onClick={addTocart}></img>
+                    <img className="product-add-to-cart-logo" alt='addtocart' src={addtocart} onClick={addTocart}></img>
                 </div>
                 <div className="share-save-div">
                     <div className="aem-Grid aem-Grid--12">
                         <div className="aem-GridColumn aem-GridColumn--default--2">
-                            <img className="save-share-logo" src={heart}></img>
+                            <img className="save-share-logo"  alt='save' src={heart}></img>
                             <label className="save-share-span">Save</label>
                         </div>
 
                         <div className="aem-GridColumn aem-GridColumn--default--3">
-                            <img className="save-share-logo" src={share}></img>
+                            <img className="save-share-logo" alt='share' src={share}></img>
                             <label className="save-share-span">Share</label>
                         </div>
                     </div>
@@ -103,13 +103,13 @@ function SingleProductDetails() {
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--4 logo">
                         <div>
-                            <img className="fabric-details-logo" src={Sweatwicking}></img>
+                            <img className="fabric-details-logo" alt='sweatwicking' src={Sweatwicking}></img>
                             <label>
                                 Sweat-wicking
                             </label>
                         </div>
                         <div>
-                            <img className="fabric-details-logo" src={Lightweightfabric}></img>
+                            <img className="fabric-details-logo" alt='lightweightfabric' src={Lightweightfabric}></img>
                             <label>
                                 Lightweight fabric
                             </label>
@@ -118,13 +118,13 @@ function SingleProductDetails() {
 
                     <div className="aem-GridColumn aem-GridColumn--default--4 logo">
                         <div>
-                            <img className="fabric-details-logo" src={Breathable}></img>
+                            <img className="fabric-details-logo" alt='breathable' src={Breathable}></img>
                             <label>
                                 Breathable
                             </label>
                         </div>
                         <div>
-                            <img className="fabric-details-logo" src={fabricdetails}></img>
+                            <img className="fabric-details-logo" alt='fabricdetails' src={fabricdetails}></img>
                             <label>
                                 69% nylon, 31% lycra
                             </label>

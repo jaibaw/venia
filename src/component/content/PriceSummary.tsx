@@ -5,8 +5,12 @@ import { useSelector } from 'react-redux';
 //price summary product
 function PriceSummary(props: any) {
     //redux state
-    const singleProductDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
     const setQuantity = useSelector((state: any) => state.getProductList.setQuantity);
+    const productDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
+
+    //maintain state on refresh 
+    const Product = window.localStorage.getItem('data');
+    const singleProductDetail = (Object.keys(productDetail).length > 0) ? productDetail : (Product ? JSON.parse(Product) : {})
 
     // return component
     return (
@@ -16,46 +20,46 @@ function PriceSummary(props: any) {
             </div>
 
             <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--9">
+                <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--11">
                     <div>
                         <div className='price-summary-sub-title'>
-                            <label>Subtotal</label>
+                            <label className="price-summary-sub-title-span">Subtotal</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label>Coupon</label>
+                            <label className="price-summary-sub-title-span">Coupon</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label>Gift Card</label>
+                            <label className="price-summary-sub-title-span">Gift Card</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label>Estimated tax</label>
+                            <label className="price-summary-sub-title-span">Estimated tax</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label>Estimated shipping</label>
+                            <label className="price-summary-sub-title-span">Estimated shipping</label>
                         </div>
                         <div className='price-summary-sub-title'>
                             <label className='price-summary-estimated-total-span'> Estimated Total</label>
                         </div>
                     </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--3">
+                <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--1">
                     <div className='price-summary-sub-title'>
-                        <label>${(singleProductDetail.price * parseInt(setQuantity)).toFixed(2)}</label>
+                        <label className="price-summary-sub-title-span">${(singleProductDetail.price * parseInt(setQuantity)).toFixed(2)}</label>
                     </div>
                     <div className='price-summary-sub-title'>
-                        <label>-${35.43}</label>
-                    </div>
-
-                    <div className='price-summary-sub-title'>
-                        <label>-${50}</label>
+                        <label className="price-summary-sub-title-span">-${35.43}</label>
                     </div>
 
                     <div className='price-summary-sub-title'>
-                        <label>${23.28}</label>
+                        <label className="price-summary-sub-title-span">-${50}</label>
                     </div>
 
                     <div className='price-summary-sub-title'>
-                        <label>FREE</label>
+                        <label className="price-summary-sub-title-span">${23.28}</label>
+                    </div>
+
+                    <div className='price-summary-sub-title'>
+                        <label className="price-summary-sub-title-span">FREE</label>
                     </div>
                     <div className='price-summary-sub-title'>
                         <label className='price-summary-estimated-total-span'>${((singleProductDetail.price * parseInt(setQuantity)) - 62.15).toFixed(2)}</label>
@@ -65,11 +69,11 @@ function PriceSummary(props: any) {
             <div className="aem-Grid aem-Grid--12">
                 <div className='price-summary-imgs-container'>
                     <div>
-                        <img className='price-summary-img-checkout' src={checkout}>
+                        <img className='price-summary-img-checkout' alt="checkout" src={checkout}>
                         </img>
                     </div>
                     <div>
-                        <img className='price-summary-img-paypal' src={paypal}>
+                        <img className='price-summary-img-paypal' alt='payment' src={paypal}>
                         </img>
                     </div>
                 </div>

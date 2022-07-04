@@ -13,7 +13,7 @@ function RecentlyViewCartProduct() {
     //return component
     return (
         <div className='product-display-list-container'>
-            <div className="aem-Grid aem-Grid--12">
+            <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--hide">
                 {recentViewList && recentViewList.map(function (key: any) {
                     return (
                         <div className="aem-GridColumn aem-GridColumn--default--3">

@@ -33,7 +33,7 @@ function Appbar() {
                 <header>
                     <nav className="aem-Grid aem-Grid--12">
                         <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--2">
-                            <img className='menu' src={menu} onClick={handleMenuBar}></img>
+                            <img className='menu' alt='menu' src={menu} onClick={handleMenuBar}></img>
                             {
                                 setMenuBarStatus &&
                                 <div className="aem-GridColumn aem-GridColumn--phone--12">
@@ -43,7 +43,7 @@ function Appbar() {
                         </div>
                         {/* </div> */}
                         <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7"} >
-                            <Link to={ROUTES.PRODUCT_LIST}>{<img className='venia-logo' src={venia_logo}></img>}</Link>
+                            <Link to={ROUTES.PRODUCT_LIST}>{<img className='venia-logo' alt='venia-logo' src={venia_logo}></img>}</Link>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--6  aem-GridColumn--phone--hide">
                             <ul className='menu-class'>
@@ -55,16 +55,16 @@ function Appbar() {
                         </div>
                         <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--3"}>
                             <ul className='menu-class'>
-                                <img className='search-logo' src={search}></img>
+                                <img className='search-logo' alt='search' src={search}></img>
                                 <li className='list-class'>Search</li>
 
-                                <img className='sign-in-logo' src={user}></img>
+                                <img className='sign-in-logo' alt='sign-in' src={user}></img>
                                 <li className='list-class'> Sign in</li>
 
                                 {
                                     setCartQuantity ?
-                                        <Link to={ROUTES.SHOPPING_CART}> {setCartQuantity} {<img className='search-logo' src={archive}></img>}</Link>
-                                        : <img className='search-logo' src={archive}></img>
+                                        <Link to={ROUTES.SHOPPING_CART}> {setCartQuantity} {<img className='search-logo' alt='cart' src={archive}></img>}</Link>
+                                        : <img className='search-logo' alt='cart' src={archive}></img>
                                 }
                             </ul>
                         </div>

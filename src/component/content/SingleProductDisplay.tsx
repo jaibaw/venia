@@ -23,7 +23,7 @@ function SingleProductDisplay() {
                                 IMG_CONST_VALUE.map((key) => {
                                     return (
                                         <div className='side-product-div'>
-                                            <img className='side-product-display' src={singleProductDetail.image}>
+                                            <img className='side-product-display' alt='product' src={singleProductDetail.image}>
                                             </img>
                                         </div>
                                     )
@@ -35,7 +35,7 @@ function SingleProductDisplay() {
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12'>
                     <div className='product-display'>
-                        <img className="single-img-display" src={singleProductDetail.image}>
+                        <img className="single-img-display" alt='product' src={singleProductDetail.image}>
                         </img>
                     </div>
                 </div>

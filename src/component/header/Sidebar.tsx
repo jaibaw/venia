@@ -25,7 +25,7 @@ function Sidebar() {
                 <div>
                     <div className='filter-title-div'>
                         <span className='sidebar-span'>Filters</span>
-                        <img className='close-log' src={close} onClick={handleMenuClose} ></img>
+                        <img className='close-log' alt='close' src={close} onClick={handleMenuClose} ></img>
                     </div>
                     <div className="attr">
                         <div className='sidebar-span-div'>

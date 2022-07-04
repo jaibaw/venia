@@ -8,7 +8,7 @@ function Color() {
                 {
                     COLOR.map((key) => {
                         return (
-                            <img className='color-list' src={key.img}>
+                            <img className='color-list' src={key.img}  alt='color-list'>
                             </img>
                         )
                     })

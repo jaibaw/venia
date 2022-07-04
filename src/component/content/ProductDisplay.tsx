@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { action_fetchSingleProduct } from '../../actions/get-products';
+import { action_fetchSingleProduct, action_setQuantity } from '../../actions/get-products';
 import heart from "../../assests/images/heart.svg";
 import Pagination from '../common/pagination/Pagination';
 import { Link } from 'react-router-dom';
@@ -33,6 +33,7 @@ function ProductDisplay() {
     //on product click dispatch single product detail
     const onProductClick = (e: any) => {
         dispatch(action_fetchSingleProduct(parseInt(e.target.id)));
+        dispatch(action_setQuantity('1'));
     }
 
     //return component
@@ -51,6 +52,7 @@ function ProductDisplay() {
                                         <Link to={ROUTES.PRODUCT_DETAILS}>
                                             {<img
                                                 className='product-img'
+                                                alt='product'
                                                 src={key.image}
                                                 id={key.id}
                                                 onClick={onProductClick}
@@ -67,7 +69,7 @@ function ProductDisplay() {
                                             <label>${key.price}</label>
                                         </div>
                                         <div>
-                                            <img src={heart}></img>
+                                            <img alt='save' src={heart}></img>
                                         </div>
                                     </div>
                                 </div>

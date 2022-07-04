@@ -43,3 +43,47 @@
 .price-summary-imgs-container {
     margin-left: 20px;
 }
+
+
+//mobile View
+@media (min-width: 320px) and (max-width: 767px) {
+    .price-summary-container {
+        width: 102%;
+        height: max-content;
+        padding: 30px 30px 30px 30px;
+        box-shadow: none;
+        border: none;
+        margin-left: -2%;
+    }
+
+    .price-summary-title-span {
+        font: normal normal 600 30px/45px Muli;
+    }
+
+    .price-summary-sub-title {
+        margin-bottom: 16px
+    }
+
+    .price-summary-sub-title-span {
+        font: normal normal 28px/38px Muli;
+    }
+
+    .price-summary-estimated-total-span {
+        font: normal normal 600 28px/38px Muli;
+    }
+
+    .price-summary-img-checkout {
+        width: 45%;
+        height: 40%;
+    }
+
+    .price-summary-imgs-container {
+        margin-left: 40%;
+    }
+
+    .price-summary-img-paypal {
+        width: 45%;
+        height: 40%;
+    }
+
+}

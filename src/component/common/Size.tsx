@@ -12,7 +12,6 @@ function Size() {
                                 <div className="box">
                                     <div className="box-span">
                                         <span >{key.img}</span>
-
                                     </div>
                                 </div>
                             </div>

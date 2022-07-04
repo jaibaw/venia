@@ -43,11 +43,11 @@ function Banner() {
         <div className="banner-container">
             <div className="aem-Grid aem-Grid--12">
                 <div className='aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12'>
-                    <img className="women-block" src={womensblock}>
+                    <img className="women-block" alt='block' src={womensblock}>
                     </img>
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12'>
-                    <img className="man-play" src={manplay}>
+                    <img className="man-play" src={manplay} alt='man-play'>
                     </img>
                 </div>
             </div>
@@ -65,7 +65,7 @@ function Banner() {
                         <div className="aem-Grid aem-Grid--12">
                             <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6'>
                                 <div className='filter-sort-sub-container'>
-                                    <img className='filter-sort-logo' src={sliders}></img>
+                                    <img className='filter-sort-logo' alt='filter'src={sliders}></img>
                                     <span className='filter-sort-span'>
                                         Filter Results
                                     </span>
@@ -73,8 +73,8 @@ function Banner() {
                             </div>
                             <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6'>
                                 <div className='filter-sort-sub-container'>
-                                    <img onClick={OnArrowUp} className='sort-logo' src={arrowup}></img>
-                                    <img onClick={OnArrowDown} className='sort-logo' src={arrowdown}></img>
+                                    <img onClick={OnArrowUp} className='sort-logo' alt='increment' src={arrowup}></img>
+                                    <img onClick={OnArrowDown} className='sort-logo' alt='decrement' src={arrowdown}></img>
                                     <span className='filter-sort-span'>
                                         Sort Products
                                     </span>

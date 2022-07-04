@@ -6,10 +6,27 @@
     margin: 30px 35% 50px 35%;
 }
 
-.shopping-cart-sub-container{
+.shopping-cart-sub-container {
     height: max-content;
     margin-left: 50px;
     margin-right: 50px;
- 
 }
 
+
+//mobile View
+@media (min-width: 320px) and (max-width: 767px) {
+    .shopping-cart-title {
+
+        width: 100%;
+        margin-left: -7%;
+        padding-left: 25%;
+    }
+
+    .shopping-cart-title-span {
+        font: normal normal 600 96px/85px Source Serif Pro;
+    }
+
+
+
+
+}

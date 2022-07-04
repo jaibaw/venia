@@ -13,7 +13,7 @@ function Quantity(props: any) {
      
     //redux state
     const setQuantity = useSelector((state: any) => state.getProductList.setQuantity);
-
+    
     //on decrement
     const onChangeDecrement = () => {
         if (quantity > 1) {
@@ -31,12 +31,12 @@ function Quantity(props: any) {
     //retun component
     return (
         <div className="quantity-container">
-            <span>{<img className="quantity-logo-minus" src={minuscircle} onClick={onChangeDecrement}></img>
+            <span>{<img className="quantity-logo-minus" alt="decrement" src={minuscircle} onClick={onChangeDecrement}></img>
             }</span>
 
             <span className="quantity-span">{setQuantity}</span>
 
-            <span>{<img className="quantity-logo-plus" src={pluscircle} onClick={onChangeIncrement}></img>
+            <span>{<img className="quantity-logo-plus" alt='increment' src={pluscircle} onClick={onChangeIncrement}></img>
             }</span>
         </div>
     );

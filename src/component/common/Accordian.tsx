@@ -18,7 +18,7 @@ export default function ControlledAccordions() {
 
   //return component
   return (
-    <div>
+    <div className='accordian-container'>
       {
         ACCORDIAN.map((key) => {
           return (<Accordion expanded={expanded === key.panel} onChange={handleChange(key.panel)}>

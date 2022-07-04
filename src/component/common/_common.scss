@@ -128,7 +128,21 @@
      }
 
      .quantity-container {
-         padding: 2% 0% 0% 35%;
+         padding: 0% 0% 0% 34%;
+     }
+
+     //Accordian
+     .accordian-container {
+         width: 155%;
+     }
+
+     .accordian-typo1-span {
+         font: normal normal normal 26px/36px Muli;
+     }
+
+     .accordian-typo2-span {
+         font: normal normal normal 24px/34px Muli;
+         margin-left: 50%;
      }
 
  }
