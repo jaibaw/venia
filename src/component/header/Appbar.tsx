@@ -13,7 +13,7 @@ import { action_setMenuBarStatus } from '../../actions/get-products';
 //appbar
 function Appbar() {
     const dispatch = useDispatch();
-   
+
     //local state
     const [menuBar, setMenuBar] = useState(false);
 
@@ -37,7 +37,7 @@ function Appbar() {
                             {
                                 setMenuBarStatus &&
                                 <div className="aem-GridColumn aem-GridColumn--phone--12">
-                                    <Sidebar/>
+                                    <Sidebar />
                                 </div>
                             }
                         </div>
@@ -53,13 +53,12 @@ function Appbar() {
                                 <li className='list-class'>Accessories</li>
                             </ul>
                         </div>
-
                         <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--3"}>
                             <ul className='menu-class'>
                                 <img className='search-logo' src={search}></img>
                                 <li className='list-class'>Search</li>
 
-                                <img className='list-class' src={user}></img>
+                                <img className='sign-in-logo' src={user}></img>
                                 <li className='list-class'> Sign in</li>
 
                                 {

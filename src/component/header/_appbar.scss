@@ -26,6 +26,7 @@
 
 .menu-class {
     margin-top: 1.75rem;
+    margin-left: 14%;
 }
 
 .list-class-women {
@@ -34,6 +35,9 @@
     margin-left: 6.25rem;
 }
 
+.sign-in-logo {
+    visibility: visible;
+}
 
 //Mobile View
 @media (min-width: 320px) and (max-width: 767px) {
@@ -58,11 +62,14 @@
         width: 11%;
         height: 35%;
         margin-right: 0px;
-        margin-bottom: 15px;
-        margin-left: 80px;
+        margin-left: 50px;
     }
 
     .header-container {
         border: none;
+    }
+
+    .sign-in-logo {
+        visibility: hidden
     }
 }

@@ -35,30 +35,32 @@ function SingleProductDisplay() {
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12'>
                     <div className='product-display'>
-                        <img className="single-img-display"  src={singleProductDetail.image}>
+                        <img className="single-img-display" src={singleProductDetail.image}>
                         </img>
                     </div>
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12">
-                <div>
-                    <label className='product-title-span'>
-                        {singleProductDetail.title}
-                    </label>
-                </div>
-                <div>
-                    <label className='product-discription-span'>
-                        Description
-                    </label>
-                </div>
-                <div>
-                    <p>
-                        {singleProductDetail.description}
-                    </p>
+                <div className="details-div">
+                    <div>
+                        <label className='product-title-span'>
+                            {singleProductDetail.title}
+                        </label>
+                    </div>
+                    <div>
+                        <label className='product-discription-span'>
+                            Description
+                        </label>
+                    </div>
+                    <div>
+                        <p>
+                            {singleProductDetail.description}
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div className='end-border'>
+            <div className='  end-border'>
 
             </div>
         </div>

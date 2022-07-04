@@ -27,7 +27,6 @@
 
 .product-title-span {
     font: normal normal 600 25px/35px Source Serif Pro;
-
 }
 
 .product-discription-span {
@@ -40,4 +39,45 @@
     width: 102px;
     height: 8px;
     margin-bottom: 8%;
+}
+
+//mobile View
+@media (min-width: 320px) and (max-width: 767px) {
+    .product-display {
+        width: 93%;
+        height: 179%;
+        border: aliceblue 1px solid;
+        padding: 20px 20px 20px 20px;
+        margin-bottom: 4px;
+        opacity: 1;
+        margin-top: 36px;
+        margin-left: 3%;
+    }
+
+    .single-img-display {
+        width: 700px;
+        height: 850px;
+        padding: 25px 20px 20px 20px;
+        margin-left: 25%;
+    }
+
+    .details-div {
+        margin-top: 65%;
+        margin-left: 3%;
+    }
+
+    .end-border {
+        display: none;
+    }
+
+    .product-title-span {
+        font: normal normal 600 40px/45px Source Serif Pro;
+        padding-bottom: 10px;
+    }
+
+    .product-discription-span {
+        font: normal normal 600 22px/26px Muli;
+        padding-bottom: 10px;
+    }
+
 }

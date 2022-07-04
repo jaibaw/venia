@@ -83,6 +83,8 @@
 
  /*=== Mobile Media ===*/
  @media (min-width: 320px) and (max-width: 767px) {
+
+     //braedcum 
      .breadcrum-container {
          height: 45px;
          margin-left: 13%;
@@ -97,15 +99,36 @@
          opacity: 1;
      }
 
+     //loader
      .react-spinner-material {
          margin: 65% 65% 65% 65%;
      }
 
+     //color
      .color-list {
          width: 105px;
          height: 75px;
          margin-top: 5px;
          margin-right: 25px;
+     }
+
+     //quantity
+     .quantity-span {
+         padding: 8px 68px 8px 68px;
+     }
+
+     .quantity-logo-minus {
+         width: 65px;
+         height: 30px;
+     }
+
+     .quantity-logo-plus {
+         width: 65px;
+         height: 30px;
+     }
+
+     .quantity-container {
+         padding: 2% 0% 0% 35%;
      }
 
  }

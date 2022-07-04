@@ -11,8 +11,6 @@ import fabricdetails from '../../assests/images/fabricdetails.png';
 import Lightweightfabric from '../../assests/images/Lightweightfabric.png';
 import Sweatwicking from '../../assests/images/Sweatwicking.png';
 import { action_setCartQuantity } from "../../actions/get-products";
-
-import { Rating } from 'react-simple-star-rating'
 import StarRating from "../common/StarRating";
 
 //single product details
@@ -36,7 +34,7 @@ function SingleProductDetails() {
     return (
         <div>
             <div className="aem-Grid aem-Grid--12">
-                <div>
+                <div className="breadcum">
                     <Breadcrum />
                 </div>
                 <div className="product-title">
@@ -57,7 +55,7 @@ function SingleProductDetails() {
                     </label>
                 </div>
                 <div className="product-discription-details">
-                    <p>
+                    <p >
                         {singleProductDetail.description}
                     </p>
                 </div>
@@ -83,7 +81,6 @@ function SingleProductDetails() {
                     {/* <Link to={ROUTES.SHOPPING_CART}>{<img className="product-add-to-cart-logo" src={addtocart}></img>}</Link> */}
 
                     <img className="product-add-to-cart-logo" src={addtocart} onClick={addTocart}></img>
-
                 </div>
                 <div className="share-save-div">
                     <div className="aem-Grid aem-Grid--12">
@@ -99,42 +96,42 @@ function SingleProductDetails() {
                     </div>
                 </div>
             </div>
-            <div className="aem-Grid aem-Grid--12">
-                <div className="product-attribute">
-                    <label className="product-attribute-span">Details</label>
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--4 logo">
-                    <div>
-                        <img className="fabric-details-logo" src={Sweatwicking}></img>
-                        <label>
-                            Sweat-wicking
-                        </label>
+            <div className="fabric-detail-div">
+                <div className="aem-Grid aem-Grid--12">
+                    <div className="product-attribute">
+                        <label className="product-attribute-span">Details</label>
                     </div>
-                    <div>
-                        <img className="fabric-details-logo" src={Lightweightfabric}></img>
-                        <label>
-                            Lightweight fabric
-                        </label>
-                    </div>
-                </div>
-
-                <div className="aem-GridColumn aem-GridColumn--default--4 logo">
-                    <div>
-                        <img className="fabric-details-logo" src={Breathable}></img>
-                        <label>
-                            Breathable
-                        </label>
-                    </div>
-                    <div>
-                        <img className="fabric-details-logo" src={fabricdetails}></img>
-                        <label>
-                            69% nylon, 31% lycra
-                        </label>
+                    <div className="aem-GridColumn aem-GridColumn--default--4 logo">
+                        <div>
+                            <img className="fabric-details-logo" src={Sweatwicking}></img>
+                            <label>
+                                Sweat-wicking
+                            </label>
+                        </div>
+                        <div>
+                            <img className="fabric-details-logo" src={Lightweightfabric}></img>
+                            <label>
+                                Lightweight fabric
+                            </label>
+                        </div>
                     </div>
 
+                    <div className="aem-GridColumn aem-GridColumn--default--4 logo">
+                        <div>
+                            <img className="fabric-details-logo" src={Breathable}></img>
+                            <label>
+                                Breathable
+                            </label>
+                        </div>
+                        <div>
+                            <img className="fabric-details-logo" src={fabricdetails}></img>
+                            <label>
+                                69% nylon, 31% lycra
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     );
 }
