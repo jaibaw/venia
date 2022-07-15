@@ -8,7 +8,7 @@ import close from '../../assests/images/close.png';
 //sidebar
 function Sidebar() {
     const dispatch = useDispatch();
-   
+
     //fetch data based on slection of dropdown
     const handleFilterChange = (e: any) => {
         dispatch(action_fetchProductByCategory(e.target.value));
@@ -25,9 +25,12 @@ function Sidebar() {
                 <div>
                     <div className='filter-title-div'>
                         <span className='sidebar-span'>Filters</span>
-                        <img className='close-log' alt='close' src={close} onClick={handleMenuClose} ></img>
+                        <img id='close' className='close-log' alt='close' src={close} onClick={handleMenuClose} ></img>
                     </div>
                     <div className="attr">
+                        <div className='attr'>
+                        </div>
+
                         <div className='sidebar-span-div'>
                             <span className='sidebar-span'>Attributes</span>
                         </div>
@@ -35,9 +38,17 @@ function Sidebar() {
                             {SIZE.map(function (key) {
                                 return (
                                     <div>
-                                        <input className='chechbox-resize' type="checkbox" id="key" name="key" value={key.value}>
-                                        </input>
-                                        <span className='checkbox-span'>{key.value}</span>
+                                        <fieldset>
+                                            <input
+                                                className='chechbox-resize'
+                                                type="checkbox"
+                                                id={key.id}
+                                                name={key.value}
+                                                value={key.value}
+                                            >
+                                            </input>
+                                            <span className='checkbox-span'>{key.value}</span>
+                                        </fieldset>
                                     </div>
                                 );
                             })}
@@ -52,18 +63,19 @@ function Sidebar() {
                             {STYLE.map(function (key) {
                                 return (
                                     <div>
-                                        <input
-                                            className='chechbox-resize'
-                                            type="checkbox"
-                                            id={(key.id)}
-                                            name="key"
-                                            value={key.value}
-                                            onClick={handleFilterChange}
-                                        // checked={checked}
-                                        >
-                                        </input>
-                                        <label className='checkbox-span'>{key.filterLabel}</label>
-                                        <br></br>
+                                        <fieldset>
+                                            <input
+                                                className='chechbox-resize'
+                                                type="checkbox"
+                                                id={key.id}
+                                                name={key.filterLabel}
+                                                value={key.value}
+                                                onClick={handleFilterChange}
+                                            // checked={checked}
+                                            >
+                                            </input>
+                                            <span className='checkbox-span'>{key.filterLabel}</span>
+                                        </fieldset>
                                     </div>
                                 );
                             })}
@@ -87,10 +99,16 @@ function Sidebar() {
                             {BRAND.map(function (key) {
                                 return (
                                     <div>
-                                        <input className='chechbox-resize' type="checkbox" id="key" name="key" value={key}>
-                                        </input>
-                                        <label className='checkbox-span'>{key}</label>
-                                        <br></br>
+                                        <fieldset>
+                                            <input
+                                                className='chechbox-resize'
+                                                type="checkbox"
+                                                id={key}
+                                                name={key}
+                                                value={key}>
+                                            </input>
+                                            <span className='checkbox-span'>{key}</span>
+                                        </fieldset>
                                     </div>
                                 );
                             })}

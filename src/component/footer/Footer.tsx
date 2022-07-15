@@ -64,13 +64,13 @@ function Footer() {
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                                 </li>
                                 <a href='https://www.instagram.com/'>
-                                    <img className='footer-social-media-logo' src={instagram}></img>
+                                    <img className='footer-social-media-logo' src={instagram} alt='instagram'></img>
                                 </a>
                                 <a href='https://www.facebook.com/'>
-                                    <img className='footer-social-media-logo' src={facebook}></img>
+                                    <img className='footer-social-media-logo' src={facebook} alt='facebook'></img>
                                 </a>
                                 <a href='https://twitter.com/'>
-                                    <img className='footer-social-media-logo' src={twitter}></img>
+                                    <img className='footer-social-media-logo' src={twitter} alt='twitter'></img>
                                 </a>
                             </ul>
                         </div>
@@ -80,7 +80,7 @@ function Footer() {
             <div className='footer-copy-right-container'>
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide">
-                        <Link to={ROUTES.PRODUCT_LIST}>{<img className='footer-venia-logo' src={venia_logo}></img>}</Link>
+                        <Link to={ROUTES.PRODUCT_LIST}>{<img className='footer-venia-logo'  alt='venia-logo' src={venia_logo}></img>}</Link>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                         <div className='footer-copy-right-div'>

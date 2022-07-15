@@ -10,13 +10,13 @@ function Breadcrum(props: any) {
         <div className="breadcrum-container">
             <Breadcrumbs>
                 <Link>
-                    <span className="span-beadcrum"> Category</span>
+                    <label  htmlFor='category' className="span-beadcrum"> Category</label>
                 </Link>
                 <Link>
                     {
                         (props.label) ?
-                            <span className="span-beadcrum">{props.label}</span> :
-                            <span className="span-beadcrum">{ (Object.keys(productDetail).length > 0) ? productDetail.category : "Dressing"}</span>
+                            <label htmlFor='name' className="span-beadcrum">{props.label}</label> :
+                            <label htmlFor='product-category' className="span-beadcrum">{ (Object.keys(productDetail).length > 0) ? productDetail.category : "Dressing"}</label>
                     }
                 </Link>
             </Breadcrumbs>

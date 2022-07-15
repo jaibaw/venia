@@ -24,6 +24,7 @@ function RecentlyViewCartProduct() {
                                             className='recent-product-img'
                                             src={key.image}
                                             id={key.id}
+                                            alt='recent-product-list'
                                         >
                                         </img>
                                         }
@@ -31,10 +32,10 @@ function RecentlyViewCartProduct() {
                                 </div>
                                 <div className='product-discription'>
                                     <div>
-                                        <label>{key.title}</label>
+                                        <label htmlFor='title'>{key.title}</label>
                                     </div>
                                     <div>
-                                        <label>${key.price}</label>
+                                        <label htmlFor='price' >${key.price}</label>
                                     </div>
                                 </div>
                             </div>

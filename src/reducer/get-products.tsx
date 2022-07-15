@@ -5,7 +5,9 @@ const initialState = {
     singleProductDetail: {},
     setQuantity: '1',
     setCartQuantity: '',
-    setMenuBarStatus : false
+    setMenuBarStatus: false,
+    cartItemList: [],
+    totolPrice: ''
 };
 
 export const getProductListReducer = (state: any = initialState, action: any) => {
@@ -54,12 +56,18 @@ export const getProductListReducer = (state: any = initialState, action: any) =>
                 setCartQuantity: action.payload
             };
 
-
         // set menu bar status
         case ActionTypes.GET_PRODUCTS.SET_MENUBAR_STATUS:
             return {
                 ...state,
                 setMenuBarStatus: action.payload
+            };
+
+        // set PRICE VALUE
+        case ActionTypes.GET_PRODUCTS.SET_TOTAL_PRICE_STATUS:
+            return {
+                ...state,
+                totolPrice: action.payload
             };
 
         default:

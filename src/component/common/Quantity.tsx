@@ -31,7 +31,7 @@ function Quantity(props: any) {
     //retun component
     return (
         <div className="quantity-container">
-            <span>{<img className="quantity-logo-minus" alt="decrement" src={minuscircle} onClick={onChangeDecrement}></img>
+            <span >{<img className="quantity-logo-minus" alt="decrement" src={minuscircle} onClick={onChangeDecrement}></img>
             }</span>
 
             <span className="quantity-span">{setQuantity}</span>

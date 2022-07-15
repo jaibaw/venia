@@ -1,68 +1,63 @@
+import { useDispatch, useSelector } from "react-redux";
 import paypal from "../../assests/images/paypal.png";
 import checkout from "../../assests/images/checkout.png";
-import { useSelector } from 'react-redux';
 
 //price summary product
 function PriceSummary(props: any) {
-    //redux state
-    const setQuantity = useSelector((state: any) => state.getProductList.setQuantity);
-    const productDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
 
-    //maintain state on refresh 
-    const Product = window.localStorage.getItem('data');
-    const singleProductDetail = (Object.keys(productDetail).length > 0) ? productDetail : (Product ? JSON.parse(Product) : {})
+    const totolPrice = useSelector((state: any) => state.getProductList.totolPrice);
 
     // return component
     return (
         <div className='price-summary-container'>
             <div className='price-summary-title'>
-                <label className='price-summary-title-span'>Pricing Summary</label>
+                <label htmlFor='price-summary' className='price-summary-title-span'>Pricing Summary</label>
             </div>
 
             <div className="aem-Grid aem-Grid--12">
                 <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--11">
                     <div>
                         <div className='price-summary-sub-title'>
-                            <label className="price-summary-sub-title-span">Subtotal</label>
+                            <label htmlFor='subtotal' className="price-summary-sub-title-span">Subtotal</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label className="price-summary-sub-title-span">Coupon</label>
+                            <label htmlFor='coupon' className="price-summary-sub-title-span">Coupon</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label className="price-summary-sub-title-span">Gift Card</label>
+                            <label htmlFor='gift-card' className="price-summary-sub-title-span">Gift Card</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label className="price-summary-sub-title-span">Estimated tax</label>
+                            <label htmlFor='tax' className="price-summary-sub-title-span">Estimated tax</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label className="price-summary-sub-title-span">Estimated shipping</label>
+                            <label htmlFor='shipping' className="price-summary-sub-title-span">Estimated shipping</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label className='price-summary-estimated-total-span'> Estimated Total</label>
+                            <label  htmlFor='total' className='price-summary-estimated-total-span'> Estimated Total</label>
                         </div>
                     </div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--1">
                     <div className='price-summary-sub-title'>
-                        <label className="price-summary-sub-title-span">${(singleProductDetail.price * parseInt(setQuantity)).toFixed(2)}</label>
+                        <label htmlFor='subtoatl-value' className="price-summary-sub-title-span">${(parseInt(totolPrice)).toFixed(2)}</label>
                     </div>
                     <div className='price-summary-sub-title'>
-                        <label className="price-summary-sub-title-span">-${35.43}</label>
-                    </div>
-
-                    <div className='price-summary-sub-title'>
-                        <label className="price-summary-sub-title-span">-${50}</label>
+                        <label  htmlFor='coupon-value' className="price-summary-sub-title-span">-${35.43}</label>
                     </div>
 
                     <div className='price-summary-sub-title'>
-                        <label className="price-summary-sub-title-span">${23.28}</label>
+                        <label htmlFor='gift-card-value' className="price-summary-sub-title-span">-${50}</label>
                     </div>
 
                     <div className='price-summary-sub-title'>
-                        <label className="price-summary-sub-title-span">FREE</label>
+                        <label   htmlFor='tax-value' className="price-summary-sub-title-span">${23.28}</label>
+                    </div>
+
+                    <div className='price-summary-sub-title'>
+                        <label htmlFor='free' className="price-summary-sub-title-span">FREE</label>
                     </div>
                     <div className='price-summary-sub-title'>
-                        <label className='price-summary-estimated-total-span'>${((singleProductDetail.price * parseInt(setQuantity)) - 62.15).toFixed(2)}</label>
+                        <label  htmlFor='toatl-value' className='price-summary-estimated-total-span'>${((parseInt(totolPrice)) - 62.15).toFixed(2)}</label>
                     </div>
                 </div>
             </div>

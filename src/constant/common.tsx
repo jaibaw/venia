@@ -6,10 +6,10 @@ import color4 from '../assests/images/color4.png';
 export const PAGE_SIZE = 15;
 
 export const STYLE = [
-    { id: "1", value: "women's clothing", filterLabel: "Women's clothing" },
-    { id: "2", value: "men's clothing", filterLabel: "Men's clothing" },
-    { id: "3", value: "jewelery", filterLabel: 'Jewelery' },
-    { id: "4", value: "electronics", filterLabel: 'Electronics' },
+    { id: "women's clothing", value: "women's clothing", filterLabel: "Women's clothing" },
+    { id: "men's clothing", value: "men's clothing", filterLabel: "Men's clothing" },
+    { id: "jewelery", value: "jewelery", filterLabel: 'Jewelery' },
+    { id: "electronics", value: "electronics", filterLabel: 'Electronics' },
 ]
 
 export const BRAND = ['Calvin klein', 'Dolee & Gabbana', 'Miu Miu', 'Prada', 'Rag &  Bone', 'Gucci', 'Chanel', 'Salotore Ferrogamo',
@@ -18,19 +18,19 @@ export const BRAND = ['Calvin klein', 'Dolee & Gabbana', 'Miu Miu', 'Prada', 'Ra
 export const IMG_CONST_VALUE = [1, 2, 3, 4, 5]
 
 export const COLOR = [
-    { id: 1, img: color1 },
-    { id: 2, img: color2 },
-    { id: 3, img: color3 },
-    { id: 4, img: color4 },
+    { id: "1", img: color1 },
+    { id: "2", img: color2 },
+    { id: "3", img: color3 },
+    { id: "4", img: color4 },
 ]
 
 export const SIZE = [
-    { id: 1, img: 'XS', value: 'X-Small' },
-    { id: 2, img: 'S', value: 'Small' },
-    { id: 3, img: 'M', value: 'Medium' },
-    { id: 4, img: 'L', value: 'Large' },
-    { id: 5, img: 'XL', value: 'X-Large' },
-    { id: 6, img: 'XXL', value: 'XX-Large' },
+    { id: 'X-Small', img: 'XS', value: 'X-Small' },
+    { id: 'Small', img: 'S', value: 'Small' },
+    { id: 'Medium', img: 'M', value: 'Medium' },
+    { id: 'Large', img: 'L', value: 'Large' },
+    { id: 'X-Large', img: 'XL', value: 'X-Large' },
+    { id: 'XX-Large', img: 'XXL', value: 'XX-Large' },
 ]
 
 export const ACCORDIAN = [

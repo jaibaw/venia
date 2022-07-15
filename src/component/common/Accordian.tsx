@@ -25,17 +25,17 @@ export default function ControlledAccordions() {
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1bh-content"
-              id="panel1bh-header"
+              id={key.panel}
             >
-              <span className='accordian-typo1-span'>
+              <span id='typo1' className='accordian-typo1-span'>
                 {key.typo1}
               </span>
-              <span className='accordian-typo2-span'>
+              <span  id='typo2' className='accordian-typo2-span'>
                 {key.typo2}
               </span>
             </AccordionSummary>
             <AccordionDetails>
-              <span className='accordian-typo1-span'>
+              <span id='typo3' className='accordian-typo1-span'>
                 {key.typo3}
               </span>
             </AccordionDetails>

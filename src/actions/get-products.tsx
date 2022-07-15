@@ -42,3 +42,9 @@ export const action_setMenuBarStatus = (payload: any) => ({
     payload,
     type: ActionTypes.GET_PRODUCTS.SET_MENUBAR_STATUS
 });
+
+// to set total price value
+export const action_setTotalPrice = (payload: any) => ({
+    payload,
+    type: ActionTypes.GET_PRODUCTS.SET_TOTAL_PRICE_STATUS
+});

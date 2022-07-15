@@ -92,7 +92,7 @@ function Banner() {
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12 aem-GridColumn--tablet--hide aem-GridColumn--phone--hide" >
                         <div>
                             <TextField
-                                id="outlined-select-currency"
+                                id="outlined-select-filter"
                                 select
                                 label="Filter"
                                 value={filterValue}
@@ -102,7 +102,7 @@ function Banner() {
                             >
                                 {FILTER.map(function (option: any) {
                                     return (
-                                        <MenuItem key={option.id} value={option.value}>
+                                        <MenuItem id={option.id} key={option.id} value={option.value}>
                                             <span className='filter-dropdown-span'>{option.filterLabel} </span>
                                         </MenuItem>
                                     );

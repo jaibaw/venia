@@ -17,6 +17,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    window.localStorage.setItem('cart', JSON.stringify([]))
     dispatch(action_fetchProductList());
   }, []);
 

@@ -8,15 +8,15 @@ function EditMenu() {
             <div className="edit-icon-container">
                 <div>
                     <img className="edit-icons" src={edit} alt='edit-menu'></img>
-                    <label className="edit-icon-span">Edit item</label>
+                    <label  htmlFor="edit" className="edit-icon-span">Edit item</label>
                 </div>
                 <div>
                     <img className="edit-icons" src={trash} alt='delete-menu'></img>
-                    <label className="edit-icon-span">Remove</label>
+                    <label htmlFor="remove" className="edit-icon-span">Remove</label>
                 </div>
                 <div>
                     <img className="edit-icons" src={heart} alt='save-menu'></img>
-                    <label className="edit-icon-span">Save for later</label>
+                    <label htmlFor="save" className="edit-icon-span">Save for later</label>
                 </div>
             </div>
         </div>

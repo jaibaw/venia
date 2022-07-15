@@ -63,10 +63,10 @@ function ProductDisplay() {
                                     </div>
                                     <div className='product-discription'>
                                         <div>
-                                            <label>{key.title}</label>
+                                            <label htmlFor='title'>{key.title}</label>
                                         </div>
                                         <div>
-                                            <label>${key.price}</label>
+                                            <label htmlFor='price' >${key.price}</label>
                                         </div>
                                         <div>
                                             <img alt='save' src={heart}></img>

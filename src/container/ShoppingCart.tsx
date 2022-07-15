@@ -17,6 +17,8 @@ function ShoppingCart() {
                             Your Shopping Bag
                         </span>
                     </div>
+                    <div className='shopping-cart-border'>
+                    </div>
                     <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
                         <AddedCartProducts />
                     </div>
