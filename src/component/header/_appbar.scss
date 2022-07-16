@@ -73,3 +73,10 @@
         visibility: hidden
     }
 }
+
+
+@media (min-width: 767px) and (max-width: 1920px) {
+    .venia-logo {
+        margin-top: 6%;
+    }
+}
