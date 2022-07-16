@@ -1,6 +1,7 @@
 .price-summary-container {
     /* Layout Properties */
-    width: 350px;
+    width: auto;
+    margin-left: 10%;
     height: max-content;
     padding: 30px 30px 30px 30px;
     /* UI Properties */
@@ -29,15 +30,17 @@
 }
 
 .price-summary-img-checkout {
-    width: 250px;
-    height: 45px;
+    //    width: 250px;
+    width: -webkit-fill-available;
+    //height: 45px;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
 .price-summary-img-paypal {
-    width: 250px;
-    height: 35px;
+    // width: 250px;
+    width: -webkit-fill-available;
+    //  height: 35px;
 }
 
 .price-summary-imgs-container {

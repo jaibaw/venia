@@ -101,12 +101,17 @@
 
 @media (min-width: 767px) and (max-width: 1920px) {
     .women-block {
-        width: 101%;
+        width: 108%;
     }
-    
-    .man-play {
-        margin-left: 0.5%;
-    }
-    
 
+    .man-play {
+        margin-left: 5.5%;
+    }
+    
+}
+
+@media (min-width: 1800px) and (max-width: 1920px) {
+    .filter-div{
+        margin-left: 130px;
+    }
 }

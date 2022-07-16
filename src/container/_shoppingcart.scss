@@ -3,7 +3,7 @@
 }
 
 .shopping-cart-title {
-    margin: 30px 35% 1% 35%;
+    padding: 30px 35% 1% 35%;
 }
 
 .shopping-cart-sub-container {
@@ -23,7 +23,6 @@
 //mobile View
 @media (min-width: 320px) and (max-width: 767px) {
     .shopping-cart-title {
-
         width: 100%;
         margin-left: -7%;
         padding-left: 25%;
@@ -32,8 +31,17 @@
     .shopping-cart-title-span {
         font: normal normal 600 96px/85px Source Serif Pro;
     }
+}
 
 
+@media (min-width: 1002px) and (max-width: 1920px) {
+    .shopping-cart-title {
+        padding: 30px 27% 1% 35%;
+    }
+}
 
-
+@media (min-width: 768px) and (max-width: 1001px) {
+    .shopping-cart-title {
+        padding: 30px 10% 1% 27%;
+    }
 }

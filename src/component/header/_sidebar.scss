@@ -111,3 +111,13 @@
         margin-top: -3%;
     }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .attr {
+        width: 138px;
+    }
+
+    .chechbox-resize {
+        margin: 15px 10px 0px 0px;
+    }
+}

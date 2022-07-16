@@ -90,7 +90,7 @@ function Banner() {
                         </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12 aem-GridColumn--tablet--hide aem-GridColumn--phone--hide" >
-                        <div>
+                        <div className='filter-div'>
                             <TextField
                                 id="outlined-select-filter"
                                 select

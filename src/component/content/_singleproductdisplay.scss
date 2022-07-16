@@ -1,5 +1,6 @@
 .product-display {
-    width: 400px;
+    //width: 400px;
+    width: -webkit-fill-available;
     height: 580px;
     border: aliceblue 1px solid;
     padding: 10px 10px 10px 10px;
@@ -9,7 +10,8 @@
 }
 
 .single-img-display {
-    width: 380px;
+    //width: 380px;
+    width: inherit;
     height: 453px;
     padding: 20px 20px 20px 20px;
 }
@@ -42,7 +44,7 @@
 }
 
 //mobile View
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .product-display {
         width: 93%;
         height: 179%;
