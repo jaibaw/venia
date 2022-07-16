@@ -1,10 +1,6 @@
 import { all, call, put, takeLatest } from "redux-saga/effects";
 import { get_all_products, get_productByCategory, get_singleProductDetail, get_sortProductPrice } from "../effects/get-products";
 import { ActionTypes } from "../constant/actions";
-import { history } from "../store/config";
-// import { ROUTES } from "../constants/route";
-// import * as HttpStatus from "http-status-codes";
-
 
 function* watchGetData() {
     // #region Section :- Document
@@ -29,7 +25,7 @@ function* get_Products(): any {
 function* get_Productt_By_Category(action: any): any {
     try {
         const response = yield call(get_productByCategory, action.payload);
-        if (response != undefined) {
+        if (response !== undefined) {
             yield put({
                 type: ActionTypes.GET_PRODUCTS.GET_PRODUCT_BY_CATEGORY_DATA_SUCCESS,
                 payload: response,
@@ -44,7 +40,7 @@ function* get_Productt_By_Category(action: any): any {
 function* get_Single_ProductDetail(action: any): any {
     try {
         const response = yield call(get_singleProductDetail, action.payload);
-        if (response != undefined) {
+        if (response !== undefined) {
             window.localStorage.setItem('data', JSON.stringify(response))
             yield put({
                 type: ActionTypes.GET_PRODUCTS.GET_SINGLE_PRODUCT_DATA_SUCCESS,
@@ -60,7 +56,7 @@ function* get_Single_ProductDetail(action: any): any {
 function* get_Sort_ProductPrice(action: any): any {
     try {
         const response = yield call(get_sortProductPrice, action.payload);
-        if (response != undefined) {
+        if (response !== undefined) {
             yield put({
                 type: ActionTypes.GET_PRODUCTS.SORT_PRODUCT_PRICE_SUCCESS,
                 payload: response,

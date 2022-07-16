@@ -5,7 +5,9 @@ import checkout from "../../assests/images/checkout.png";
 //price summary product
 function PriceSummary(props: any) {
 
-    const totolPrice = useSelector((state: any) => state.getProductList.totolPrice);
+    //maintain state on refresh 
+    const total = window.localStorage.getItem('total');
+    const totolPrice = total ? JSON.parse(total) : [];
 
     // return component
     return (
@@ -33,7 +35,7 @@ function PriceSummary(props: any) {
                             <label htmlFor='shipping' className="price-summary-sub-title-span">Estimated shipping</label>
                         </div>
                         <div className='price-summary-sub-title'>
-                            <label  htmlFor='total' className='price-summary-estimated-total-span'> Estimated Total</label>
+                            <label htmlFor='total' className='price-summary-estimated-total-span'> Estimated Total</label>
                         </div>
                     </div>
                 </div>
@@ -42,7 +44,7 @@ function PriceSummary(props: any) {
                         <label htmlFor='subtoatl-value' className="price-summary-sub-title-span">${(parseInt(totolPrice)).toFixed(2)}</label>
                     </div>
                     <div className='price-summary-sub-title'>
-                        <label  htmlFor='coupon-value' className="price-summary-sub-title-span">-${35.43}</label>
+                        <label htmlFor='coupon-value' className="price-summary-sub-title-span">-${35.43}</label>
                     </div>
 
                     <div className='price-summary-sub-title'>
@@ -50,14 +52,14 @@ function PriceSummary(props: any) {
                     </div>
 
                     <div className='price-summary-sub-title'>
-                        <label   htmlFor='tax-value' className="price-summary-sub-title-span">${23.28}</label>
+                        <label htmlFor='tax-value' className="price-summary-sub-title-span">${23.28}</label>
                     </div>
 
                     <div className='price-summary-sub-title'>
                         <label htmlFor='free' className="price-summary-sub-title-span">FREE</label>
                     </div>
                     <div className='price-summary-sub-title'>
-                        <label  htmlFor='toatl-value' className='price-summary-estimated-total-span'>${((parseInt(totolPrice)) - 62.15).toFixed(2)}</label>
+                        <label htmlFor='toatl-value' className='price-summary-estimated-total-span'>${((parseInt(totolPrice)) - 62.15).toFixed(2)}</label>
                     </div>
                 </div>
             </div>

@@ -18,9 +18,9 @@ function Appbar() {
     const [menuBar, setMenuBar] = useState(false);
 
     //maintain state on refresh 
-    const Product = window.localStorage.getItem('cart');
-    const uniqueCartItemList = Product ? JSON.parse(Product) : [];
-    
+    const total = window.localStorage.getItem('cartValue');
+    const cartValue = total ? total : ' ';
+
     //redux state
     const setCartQuantity = useSelector((state: any) => state.getProductList.setCartQuantity);
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
@@ -60,14 +60,14 @@ function Appbar() {
                         <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--3"}>
                             <ul className='menu-class'>
                                 <img className='search-logo' alt='search' src={search}></img>
-                                <li  className='list-class'>Search</li>
+                                <li className='list-class'>Search</li>
 
                                 <img className='sign-in-logo' alt='sign-in' src={user}></img>
                                 <li className='list-class'> Sign in</li>
 
                                 {
-                                    uniqueCartItemList.length ?
-                                        <Link to={ROUTES.SHOPPING_CART}> {uniqueCartItemList.length} {<img className='search-logo' alt='cart' src={archive}></img>}</Link>
+                                    cartValue !== ' ' ?
+                                        <Link to={ROUTES.SHOPPING_CART}> {cartValue === ' ' ? setCartQuantity : cartValue} {<img className='search-logo' alt='cart' src={archive}></img>}</Link>
                                         : <img className='search-logo' alt='cart' src={archive}></img>
                                 }
                             </ul>

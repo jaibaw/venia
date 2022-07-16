@@ -32,10 +32,13 @@ function SingleProductDetails() {
         cartItemList.push(singleProductDetail);
         let uniqueCartItemList = [...new Set(cartItemList)];
         window.localStorage.setItem('cart', JSON.stringify(uniqueCartItemList))
+        window.localStorage.setItem('cartValue', JSON.stringify(uniqueCartItemList.length))
 
         let totol = 0;
         uniqueCartItemList && uniqueCartItemList.map((key: any) => {
             totol = key.price + totol;
+            window.localStorage.setItem('total', JSON.stringify(totol))
+
             dispatch(action_setTotalPrice(totol));
         })
         //temp : added hardcode data
@@ -90,7 +93,7 @@ function SingleProductDetails() {
                     <Quantity />
                 </div>
                 <div>
-                    <Link to={ROUTES.SHOPPING_CART}>{<img  alt='addtocart' className="product-add-to-cart-logo" src={addtocart} onClick={addTocart} ></img>}</Link>
+                    <Link to={ROUTES.SHOPPING_CART}>{<img alt='addtocart' className="product-add-to-cart-logo" src={addtocart} onClick={addTocart} ></img>}</Link>
                     {/* <img className="product-add-to-cart-logo" alt='addtocart' src={addtocart} onClick={addTocart}></img> */}
                 </div>
                 <div className="share-save-div">

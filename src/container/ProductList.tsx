@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from 'react';
+import { useSelector } from "react-redux";
 import Banner from '../component/header/Banner';
 import Sidebar from '../component/header/Sidebar';
 import ProductDisplay from '../component/content/ProductDisplay';
@@ -8,6 +8,12 @@ import ProductDisplay from '../component/content/ProductDisplay';
 function ProductList() {
     //redux state
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
+
+
+    useEffect(() => {
+        //maintain state on refresh 
+         window.localStorage.setItem('cartValue', ' ')
+    });
 
 
     return (
