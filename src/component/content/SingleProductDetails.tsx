@@ -22,11 +22,11 @@ function SingleProductDetails() {
     //redux state
     const productDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
     const cartItemList = useSelector((state: any) => state.getProductList.cartItemList);
-    
+
     //maintain state on refresh 
     const Product = window.localStorage.getItem('data');
     const singleProductDetail = (Object.keys(productDetail).length > 0) ? productDetail : (Product ? JSON.parse(Product) : {})
-    
+
     // maintain cart quantity
     const addTocart = () => {
         cartItemList.push(singleProductDetail);
@@ -44,6 +44,15 @@ function SingleProductDetails() {
                 <div className="breadcum">
                     <Breadcrum />
                 </div>
+                <div className='aem-GridColumn  aem-GridColumn--phone--12'>
+                    <div className="product-display-phone-view">
+                        <div className='product-display'>
+                            <img className="single-img-display" alt='product' src={singleProductDetail.image}>
+                            </img>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="product-title">
                     <label htmlFor='title' className="product-title-span">
                         {singleProductDetail.title}
@@ -104,38 +113,41 @@ function SingleProductDetails() {
                     </div>
                 </div>
             </div>
-            <div className="fabric-detail-div">
-                <div className="aem-Grid aem-Grid--12">
-                    <div className="product-attribute">
-                        <label htmlFor='details' className="product-attribute-span">Details</label>
-                    </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--4 logo">
-                        <div>
-                            <img className="fabric-details-logo" alt='sweatwicking' src={Sweatwicking}></img>
-                            <label htmlFor='details'>
-                                Sweat-wicking
-                            </label>
-                        </div>
-                        <div>
-                            <img className="fabric-details-logo" alt='lightweightfabric' src={Lightweightfabric}></img>
-                            <label htmlFor='details'>
-                                Lightweight fabric
-                            </label>
-                        </div>
-                    </div>
 
-                    <div className="aem-GridColumn aem-GridColumn--default--4 logo">
-                        <div>
-                            <img className="fabric-details-logo" alt='breathable' src={Breathable}></img>
-                            <label htmlFor='details'>
-                                Breathable
-                            </label>
+            <div className="product-display-desktop-view">
+                <div className="fabric-detail-div">
+                    <div className="aem-Grid aem-Grid--12">
+                        <div className="product-attribute">
+                            <label htmlFor='details' className="product-attribute-span">Details</label>
                         </div>
-                        <div>
-                            <img className="fabric-details-logo" alt='fabricdetails' src={fabricdetails}></img>
-                            <label htmlFor='details'>
-                                69% nylon, 31% lycra
-                            </label>
+                        <div className="aem-GridColumn aem-GridColumn--default--4 logo">
+                            <div>
+                                <img className="fabric-details-logo" alt='sweatwicking' src={Sweatwicking}></img>
+                                <label htmlFor='details'>
+                                    Sweat-wicking
+                                </label>
+                            </div>
+                            <div>
+                                <img className="fabric-details-logo" alt='lightweightfabric' src={Lightweightfabric}></img>
+                                <label htmlFor='details'>
+                                    Lightweight fabric
+                                </label>
+                            </div>
+                        </div>
+
+                        <div className="aem-GridColumn aem-GridColumn--default--4 logo">
+                            <div>
+                                <img className="fabric-details-logo" alt='breathable' src={Breathable}></img>
+                                <label htmlFor='details'>
+                                    Breathable
+                                </label>
+                            </div>
+                            <div>
+                                <img className="fabric-details-logo" alt='fabricdetails' src={fabricdetails}></img>
+                                <label htmlFor='details'>
+                                    69% nylon, 31% lycra
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>

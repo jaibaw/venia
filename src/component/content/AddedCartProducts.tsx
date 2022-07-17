@@ -47,7 +47,7 @@ function AddedCartProducts() {
                                     <img src={threemenu} className='three-menu-logo ' alt='icon'></img>
                                 </div>
                             </div>
-                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--hide">
                                 <div className='added-product-quantity'>
                                     <Quantity
                                         quantityId={key.id}
@@ -57,8 +57,19 @@ function AddedCartProducts() {
                             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide">
                                 <EditMenu />
                             </div>
-
                         </div>
+                        <div className='product-display-phone-view'>
+                            <div className="aem-Grid aem-Grid--12">
+                                <div className="aem-GridColumn  aem-GridColumn--phone--12">
+                                    <div className='added-product-quantity'>
+                                        <Quantity
+                                            quantityId={key.id}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 );
 

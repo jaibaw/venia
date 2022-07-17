@@ -43,8 +43,25 @@
     margin-bottom: 8%;
 }
 
+.product-display-phone-view {
+    display: none;
+}
+
+.product-display-desktop-view {
+    display: block;
+}
+
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
+
+    .product-display-phone-view {
+        display: block;
+    }
+
+    .product-display-desktop-view {
+        display: none;
+    }
+
     .product-display {
         // width: 93%;
         // height: 179%;
@@ -62,12 +79,12 @@
     }
 
     .details-div {
-        margin-top: 65%;
-        margin-left: 3%;
+        // margin-top: 65%;
+        // margin-left: 3%;
     }
 
     .end-border {
-        display: none;
+        //       display: none;
     }
 
     .product-title-span {

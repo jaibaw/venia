@@ -23,14 +23,26 @@
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
     .shopping-cart-title {
-        width: 100%;
-        margin-left: -7%;
-        padding-left: 25%;
+        padding: 0vw 0vw 0vw 24vw;
+        width: 100vw;
     }
 
     .shopping-cart-title-span {
-        font: normal normal 600 96px/85px Source Serif Pro;
+        font: normal normal 600 7vw Source Serif Pro;
     }
+
+    .shopping-cart-border {
+        border: #1F39FF 2px solid;
+        width: 15vw;
+        height: 0px;
+        margin-bottom: 8%;
+        margin-left: 45vw;
+    }
+
+    .shopping-cart-sub-container {
+        margin-right: 0px;
+    }
+
 }
 
 
