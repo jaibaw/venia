@@ -40,30 +40,38 @@
     display: none;
 }
 
+.banner-desktop {
+    display: block;
+}
+
+.banner-phone {
+    display: none;
+}
+
 /*=== Mobile Media ===*/
-@media (min-width: 320px) and (max-width: 766px) {
-    .women-block {
-        width: 86%;
-        height: max-content;
-        padding-top: 33%;
-        position: sticky;
-        margin-left: 12%;
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .banner-desktop {
+        display: none;
     }
 
-    .man-play {
-        height: 702px;
-        margin-top: -77%;
-        width: 103%;
-        margin-top: -136%;
+    .banner-phone {
+        display: block;
     }
 
-    .banner-container {
-        margin-top: 0px;
+    .women-block-phone {
+        width: 90vw;
+        margin: -10vw 0vw 3vw 12vw;
+    }
+
+    .man-play-phone {
+        width: 110vw;
+        margin-top: -6%;
     }
 
     .filter-sort-div {
         display: block;
-        padding-left: 445px;
+        padding-left: 15%;
         padding-bottom: 5%;
     }
 
@@ -71,35 +79,25 @@
         padding-top: 6%;
     }
 
-    .filter-sort-span {
-        font: normal normal normal bold 28px/35px Muli;
-    }
-
     .filter-sort-logo {
-        width: 28px;
-        height: 35px;
+        width: auto;
         margin-right: 3px;
     }
 
     .sort-logo {
-        width: 16px;
-        height: 35px;
+        width: auto;
         margin-right: 3px;
     }
 
-    .result-span {
-        /* margin-left: 4px; */
-        font: normal normal 600 30px/20px Muli;
-    }
 
     .result-div {
-        margin-left: 50%;
+        margin-left: 40%;
         margin-bottom: 3%;
     }
 }
 
 
-@media (min-width: 767px) and (max-width: 1920px) {
+@media (min-width: 769px) and (max-width: 1920px) {
     .women-block {
         width: 108%;
     }
@@ -107,11 +105,11 @@
     .man-play {
         margin-left: 5.5%;
     }
-    
+
 }
 
 @media (min-width: 1800px) and (max-width: 1920px) {
-    .filter-div{
+    .filter-div {
         margin-left: 130px;
     }
 }

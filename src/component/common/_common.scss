@@ -83,7 +83,7 @@
  }
 
  /*=== Mobile Media ===*/
- @media (min-width: 320px) and (max-width: 767px) {
+ @media (min-width: 320px) and (max-width: 768px) {
 
      //braedcum 
      .breadcrum-container {
@@ -94,7 +94,7 @@
      .span-beadcrum {
          text-transform: capitalize;
          /* UI Properties */
-         font: normal normal normal 30px/40px Muli;
+         font: normal normal normal 20px/25px Muli;
          letter-spacing: 0px;
          color: #181C24;
          opacity: 1;

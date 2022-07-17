@@ -49,8 +49,8 @@ function ProductDisplay() {
                             <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6">
                                 <div className='product-display-container'>
                                     <div className='product-display-img-div'>
-                                        <Link to={ROUTES.PRODUCT_DETAILS}>
-                                            {<img
+                                        <Link to={ROUTES.PRODUCT_DETAILS}> 
+                                           {<img
                                                 className='product-img'
                                                 alt='product'
                                                 src={key.image}

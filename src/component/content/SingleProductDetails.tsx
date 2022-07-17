@@ -22,25 +22,17 @@ function SingleProductDetails() {
     //redux state
     const productDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
     const cartItemList = useSelector((state: any) => state.getProductList.cartItemList);
-
+    
     //maintain state on refresh 
     const Product = window.localStorage.getItem('data');
     const singleProductDetail = (Object.keys(productDetail).length > 0) ? productDetail : (Product ? JSON.parse(Product) : {})
-
+    
     // maintain cart quantity
     const addTocart = () => {
         cartItemList.push(singleProductDetail);
         let uniqueCartItemList = [...new Set(cartItemList)];
         window.localStorage.setItem('cart', JSON.stringify(uniqueCartItemList))
         window.localStorage.setItem('cartValue', JSON.stringify(uniqueCartItemList.length))
-
-        let totol = 0;
-        uniqueCartItemList && uniqueCartItemList.map((key: any) => {
-            totol = key.price + totol;
-            window.localStorage.setItem('total', JSON.stringify(totol))
-
-            dispatch(action_setTotalPrice(totol));
-        })
         //temp : added hardcode data
         dispatch(action_setCartQuantity(uniqueCartItemList.length));
     }
@@ -90,7 +82,9 @@ function SingleProductDetails() {
                     <div className="product-attribute">
                         <span className="product-attribute-span">Quantity</span>
                     </div>
-                    <Quantity />
+                    <Quantity
+                        quantityId={0}
+                    />
                 </div>
                 <div>
                     <Link to={ROUTES.SHOPPING_CART}>{<img alt='addtocart' className="product-add-to-cart-logo" src={addtocart} onClick={addTocart} ></img>}</Link>

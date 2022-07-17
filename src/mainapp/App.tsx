@@ -23,22 +23,27 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="aem-Grid aem-Grid--12">
         <Suspense fallback={<h1>Still Loading…</h1>}>
-          <header>
-            <Appbar />
-          </header>
-          <main>
-            {/* 1,159 */}
-            <Routes>
-              <Route path={ROUTES.PRODUCT_LIST} element={<ProductList />} />
-              <Route path={ROUTES.PRODUCT_DETAILS} element={<ProductDetail />} />
-              <Route path={ROUTES.SHOPPING_CART} element={<ShoppingCart />} />
-            </Routes>
-          </main>
-          <footer>
-            <Footer />
-          </footer>
+          <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12">
+            <header>
+              <Appbar />
+            </header>
+          </div>
+          <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12">
+            <main>
+              <Routes>
+                <Route path={ROUTES.PRODUCT_LIST} element={<ProductList />} />
+                <Route path={ROUTES.PRODUCT_DETAILS} element={<ProductDetail />} />
+                <Route path={ROUTES.SHOPPING_CART} element={<ShoppingCart />} />
+              </Routes>
+            </main>
+          </div>
+          <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12">
+            <footer>
+              <Footer />
+            </footer>
+          </div>
         </Suspense>
       </div>
     </>

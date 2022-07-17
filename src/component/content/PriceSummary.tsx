@@ -1,13 +1,30 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import paypal from "../../assests/images/paypal.png";
 import checkout from "../../assests/images/checkout.png";
+import { useEffect } from "react";
 
 //price summary product
 function PriceSummary(props: any) {
+    //redux state
+    const setQuantity = useSelector((state: any) => state.getProductList.setQuantity);
 
     //maintain state on refresh 
-    const total = window.localStorage.getItem('total');
-    const totolPrice = total ? JSON.parse(total) : [];
+    const Product = window.localStorage.getItem('cart');
+    let uniqueCartItemList = Product ? JSON.parse(Product) : [];
+
+
+    useEffect(() => {
+        price();
+    });
+
+    let totolPrice = 0;
+
+    const price = () => {
+        return uniqueCartItemList && uniqueCartItemList.map((key: any) => {
+            return totolPrice = (key.price * (parseInt(setQuantity))) + totolPrice;
+        })
+    }
+    console.log(price())
 
     // return component
     return (
@@ -41,7 +58,7 @@ function PriceSummary(props: any) {
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--1">
                     <div className='price-summary-sub-title'>
-                        <label htmlFor='subtoatl-value' className="price-summary-sub-title-span">${(parseInt(totolPrice)).toFixed(2)}</label>
+                        <label htmlFor='subtoatl-value' className="price-summary-sub-title-span">${totolPrice.toFixed(2)}</label>
                     </div>
                     <div className='price-summary-sub-title'>
                         <label htmlFor='coupon-value' className="price-summary-sub-title-span">-${35.43}</label>
@@ -59,7 +76,7 @@ function PriceSummary(props: any) {
                         <label htmlFor='free' className="price-summary-sub-title-span">FREE</label>
                     </div>
                     <div className='price-summary-sub-title'>
-                        <label htmlFor='toatl-value' className='price-summary-estimated-total-span'>${((parseInt(totolPrice)) - 62.15).toFixed(2)}</label>
+                        <label htmlFor='toatl-value' className='price-summary-estimated-total-span'>${totolPrice.toFixed(2)}</label>
                     </div>
                 </div>
             </div>

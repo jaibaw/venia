@@ -10,34 +10,49 @@ function Quantity(props: any) {
 
     //local state
     const [quantity, setquantity] = useState(1);
-     
-    //redux state
-    const setQuantity = useSelector((state: any) => state.getProductList.setQuantity);
-    
+    const [quantityCart, setquantityCart] = useState(1);
+
     //on decrement
-    const onChangeDecrement = () => {
+    const onChangeDecrement = (e: any) => {
         if (quantity > 1) {
-            setquantity(quantity - 1)
-            dispatch(action_setQuantity(quantity.toString()));
+            if (props.quantityId !== 0) {
+                setquantity(quantity - 1)
+                dispatch(action_setQuantity(quantity.toString()));
+            } else {
+                setquantityCart(quantityCart - 1)
+                dispatch(action_setQuantity(quantityCart.toString()));
+            }
         }
+        window.localStorage.setItem('quantity', JSON.stringify(quantity))
     }
 
     //on increment
-    const onChangeIncrement = () => {
-        setquantity(quantity + 1);
-        dispatch(action_setQuantity(quantity.toString()));
+    const onChangeIncrement = (e: any) => {
+        if (props.quantityId !== 0) {
+            setquantity(quantity + 1)
+            dispatch(action_setQuantity(quantity.toString()));
+        } else {
+            setquantityCart(quantityCart + 1)
+            dispatch(action_setQuantity(quantityCart.toString()));
+        }
+        window.localStorage.setItem('quantity', JSON.stringify(quantity))
     }
 
     //retun component
     return (
         <div className="quantity-container">
-            <span >{<img className="quantity-logo-minus" alt="decrement" src={minuscircle} onClick={onChangeDecrement}></img>
-            }</span>
+            {
+                <div>
+                    <span >{<img id={props.quantityId} className="quantity-logo-minus" alt="decrement" src={minuscircle} onClick={onChangeDecrement}></img>
+                    }</span>
 
-            <span className="quantity-span">{setQuantity}</span>
+                    <span id={props.quantityId} className="quantity-span">{(props.quantityId !== 0 ? quantity : quantityCart)}</span>
 
-            <span>{<img className="quantity-logo-plus" alt='increment' src={pluscircle} onClick={onChangeIncrement}></img>
-            }</span>
+                    <span>{<img id={props.quantityId} className="quantity-logo-plus" alt='increment' src={pluscircle} onClick={onChangeIncrement}></img>
+                    }</span>
+
+                </div>
+            }
         </div>
     );
 }

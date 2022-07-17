@@ -41,47 +41,76 @@ function Banner() {
     //return component
     return (
         <div className="banner-container">
-            <div className="aem-Grid aem-Grid--12">
-                <div className='aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12'>
-                    <img className="women-block" alt='block' src={womensblock}>
-                    </img>
+            <div className='banner-desktop'> 
+                <div className="aem-Grid aem-Grid--12">
+                    <div className='aem-GridColumn aem-GridColumn--default--5'>
+                        <div>
+                            <img className="women-block" alt='block' src={womensblock}>
+                            </img>
+                        </div>
+                    </div>
+                    <div className='aem-GridColumn aem-GridColumn--default--7'>
+                        <div>
+                            <img className="man-play" src={manplay} alt='man-play'>
+                            </img>
+
+                        </div>
+                    </div>
                 </div>
-                <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12'>
-                    <img className="man-play" src={manplay} alt='man-play'>
-                    </img>
+
+            </div>
+
+            <div className='banner-phone'>
+                <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
+                    <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                        <div>
+                            <img className="man-play-phone" src={manplay} alt='man-play'>
+                            </img>
+
+                        </div>
+                    </div>
+                    <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                        <div>
+                            <img className="women-block-phone" alt='block' src={womensblock}>
+                            </img>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             {/* Breadcrum menus */}
             <div className='banner-sub-container'>
-                <div className="aem-Grid aem-Grid--12 " >
+                <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12" >
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
                         <Breadcrum
                             label={filterValue}
                         />
                     </div>
-
-                    <div className='filter-sort-div'>
-                        <div className="aem-Grid aem-Grid--12">
-                            <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6'>
-                                <div className='filter-sort-sub-container'>
-                                    <img className='filter-sort-logo' alt='filter'src={sliders}></img>
-                                    <span className='filter-sort-span'>
-                                        Filter Results
-                                    </span>
+                    <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
+                        <div className='filter-sort-div'>
+                            <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
+                                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6'>
+                                    <div className='filter-sort-sub-container'>
+                                        <img className='filter-sort-logo' alt='filter' src={sliders}></img>
+                                        <span className='filter-sort-span'>
+                                            Filter Results
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6'>
-                                <div className='filter-sort-sub-container'>
-                                    <img onClick={OnArrowUp} className='sort-logo' alt='increment' src={arrowup}></img>
-                                    <img onClick={OnArrowDown} className='sort-logo' alt='decrement' src={arrowdown}></img>
-                                    <span className='filter-sort-span'>
-                                        Sort Products
-                                    </span>
+                                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6'>
+                                    <div className='filter-sort-sub-container'>
+                                        <img onClick={OnArrowUp} className='sort-logo' alt='increment' src={arrowup}></img>
+                                        <img onClick={OnArrowDown} className='sort-logo' alt='decrement' src={arrowdown}></img>
+                                        <span className='filter-sort-span'>
+                                            Sort Products
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
 
                     <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" >
                         <div className='result-div'>

@@ -10,11 +10,11 @@
 
 /*=== Mobile Media ===*/
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .product-list-container {
         height: max-content;
-        opacity: 1;
         margin-left: -4%;
+        margin-right: 0px;
     }
 
     .display-list {

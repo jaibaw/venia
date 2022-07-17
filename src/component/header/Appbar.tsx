@@ -32,50 +32,50 @@ function Appbar() {
 
     //return component
     return (
-        <div className='header-container'>
-            <section className="header">
-                <header>
-                    <nav className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--2">
-                            <img className='menu' alt='menu' src={menu} onClick={handleMenuBar}></img>
+        <div className="aem-Grid aem-Grid--12">
+            <div className='header-container'>
+                <nav className="aem-Grid aem-Grid--12">
+                    <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--2">
+                        <img className='menu' alt='menu' src={menu} onClick={handleMenuBar}></img>
+                        {
+                            setMenuBarStatus &&
+                            <div className="aem-GridColumn aem-GridColumn--phone--12">
+                                <Sidebar />
+                            </div>
+                        }
+                    </div>
+                    {/* </div> */}
+                    <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7"} >
+                        <Link to={ROUTES.PRODUCT_LIST}>{<img className={setMenuBarStatus ? 'list-class' : 'venia-logo'} alt='venia-logo' src={venia_logo}></img>}</Link>
+                    </div>
+                    <div className="aem-GridColumn aem-GridColumn--default--6  aem-GridColumn--phone--hide">
+                        <ul className='menu-class'>
+                            <li className='list-class-women'>Women</li>
+                            <li className='list-class'>Men</li>
+                            <li className='list-class'>Smart Gear</li>
+                            <li className='list-class'>Accessories</li>
+                        </ul>
+                    </div>
+                    <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--3"}>
+                        <ul className='menu-class'>
+                            <img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='search' src={search}></img>
+                            <li className='list-class'>Search</li>
+
+                            <img className='sign-in-logo' alt='sign-in' src={user}></img>
+                            <li className='list-class'> Sign in</li>
+
                             {
-                                setMenuBarStatus &&
-                                <div className="aem-GridColumn aem-GridColumn--phone--12">
-                                    <Sidebar />
-                                </div>
+                                cartValue !== ' ' ?
+                                    <Link to={ROUTES.SHOPPING_CART}> {cartValue === ' ' ? setCartQuantity : cartValue} {<img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='cart' src={archive}></img>}</Link>
+                                    : <img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='cart' src={archive}></img>
                             }
-                        </div>
-                        {/* </div> */}
-                        <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7"} >
-                            <Link to={ROUTES.PRODUCT_LIST}>{<img className='venia-logo' alt='venia-logo' src={venia_logo}></img>}</Link>
-                        </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--6  aem-GridColumn--phone--hide">
-                            <ul className='menu-class'>
-                                <li className='list-class-women'>Women</li>
-                                <li className='list-class'>Men</li>
-                                <li className='list-class'>Smart Gear</li>
-                                <li className='list-class'>Accessories</li>
-                            </ul>
-                        </div>
-                        <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--3"}>
-                            <ul className='menu-class'>
-                                <img className='search-logo' alt='search' src={search}></img>
-                                <li className='list-class'>Search</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
 
-                                <img className='sign-in-logo' alt='sign-in' src={user}></img>
-                                <li className='list-class'> Sign in</li>
-
-                                {
-                                    cartValue !== ' ' ?
-                                        <Link to={ROUTES.SHOPPING_CART}> {cartValue === ' ' ? setCartQuantity : cartValue} {<img className='search-logo' alt='cart' src={archive}></img>}</Link>
-                                        : <img className='search-logo' alt='cart' src={archive}></img>
-                                }
-                            </ul>
-                        </div>
-                    </nav>
-                </header>
-            </section>
         </div>
+
     );
 }
 
