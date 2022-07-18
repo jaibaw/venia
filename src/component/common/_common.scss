@@ -14,8 +14,8 @@
 
  //color
  .color-list {
-     width: 64px;
-     height: 40px;
+     width: -webkit-fill-available;
+     height: 4vw;
      margin-top: 5px;
  }
 
@@ -88,6 +88,9 @@
      //braedcum 
      .breadcrum-container {
          height: 45px;
+     }
+
+     .breadcum {
          margin-left: 13%;
      }
 
@@ -107,17 +110,20 @@
 
      //color
      .color-list {
-         width: 105px;
-         height: 75px;
-         margin-top: 5px;
-         margin-right: 25px;
+         width: -webkit-fill-available;
+         height: 8vw;
+         margin-top: 1vw;
+         margin-right: 2vw;
      }
-
 
      //Accordian
      .accordian-container {
-        margin: 2vw;
+         margin: 2vw;
      }
 
+     //quantity
+     .quantity-span {
+         padding: 1vw 8vw 1vw 8vw;
+     }
 
  }

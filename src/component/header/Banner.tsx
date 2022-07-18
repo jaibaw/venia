@@ -41,7 +41,7 @@ function Banner() {
     //return component
     return (
         <div className="banner-container">
-            <div className='banner-desktop'> 
+            <div className='banner-desktop'>
                 <div className="aem-Grid aem-Grid--12">
                     <div className='aem-GridColumn aem-GridColumn--default--5'>
                         <div>
@@ -82,9 +82,11 @@ function Banner() {
             <div className='banner-sub-container'>
                 <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12" >
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-                        <Breadcrum
-                            label={filterValue}
-                        />
+                        <div  className="breadcum">
+                            <Breadcrum
+                                label={filterValue}
+                            />
+                        </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
                         <div className='filter-sort-div'>

@@ -64,23 +64,12 @@
         margin: 78% 0px 4px 0px;
     }
 
-    .breadcum {
-        // margin-left: -12%;
-        // margin-top: -159.5%;
-    }
-
     .product-price-span {
-        font: normal normal 600 24px/28px Muli;
-        padding-bottom: 10px;
+        padding-bottom: 3vw;
     }
 
     .product-rating-span {
-        padding-bottom: 10px;
-        font: normal normal 600 24px/28px Muli;
-    }
-
-    .product-attribute-span {
-        font: normal normal 600 22px/26px Muli;
+        padding-bottom: 3vw;
     }
 
     .product-attribute {
@@ -88,26 +77,51 @@
     }
 
     .box {
-        width: 85px;
-        height: 55px;
+        width: auto;
+        margin-left: 1vw;
     }
 
     .box-span {
-        margin: 13px 0px 0px 26px;
+        margin: 0.5vw 0px 0px 5vw;
     }
 
     .product-add-to-cart-logo {
-        width: 274px;
-        height: 52px;
-        margin-left: 36%;
+        width: auto;
+        height: 6vw;
+        margin-left: 25vw;
+        margin-top: 1vw;
     }
 
     .share-save-div {
-        margin-left: 39%;
-        margin-top: 7px;
+        margin: 2vw 0px 2vw 23.5vw;
+    }
+
+    .save-share-span {
+        font: normal normal 600 14px/18px Muli;
     }
 
     .fabric-detail-div {
         margin-bottom: 5%;
+    }
+
+    .quantity-div {
+        margin-left: 30vw;
+    }
+}
+
+
+//mobile View
+@media (min-width: 500px) and (max-width: 768px) {
+    .quantity-div {
+        margin-left: 34vw;
+    }
+}
+
+
+//mobile View
+@media (min-width: 320px) and (max-width: 430px) {
+    .product-add-to-cart-logo {
+        height: 8vw;
+        margin-left: 20vw;
     }
 }

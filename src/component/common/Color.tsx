@@ -8,8 +8,10 @@ function Color() {
                 {
                     COLOR.map((key) => {
                         return (
-                            <img  id={key.id} className='color-list' src={key.img}  alt='color-list'>
-                            </img>
+                            <div className="aem-GridColumn aem-GridColumn--default--2  aem-GridColumn--phone--3">
+                                <img id={key.id} className='color-list' src={key.img} alt='color-list'>
+                                </img>
+                            </div>
                         )
                     })
                 }

@@ -11,7 +11,7 @@
 }
 
 .footer-main-container {
-    padding: 30px 0px 0px 0pc;
+    padding: 30px 0px 0px 0px;
     border-top: #eceeef 3px solid;
     //   border-bottom: #eceeef 3px solid;
     height: max-content;
@@ -87,8 +87,9 @@
 
 /*=== Mobile Media ===*/
 @media (min-width: 320px) and (max-width: 768px) {
-    .footer-container {
-        margin-left: 5%;
+
+    .footer-main-container {
+        padding: 3vw 0px 0px 0px;
     }
 
     .footer-heading-span-follow {

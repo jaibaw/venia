@@ -54,7 +54,7 @@ function SingleProductDisplay() {
             <div className="aem-Grid aem-Grid--12">
                 <div className="details-div">
                     <div>
-                        <label htmlFor='title' className='product-title-span'>
+                        <label htmlFor='title' className='product-title-span-display'>
                             {singleProductDetail.title}
                         </label>
                     </div>

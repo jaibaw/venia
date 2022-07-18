@@ -8,7 +8,7 @@ function Size() {
                 {
                     SIZE.map((key) => {
                         return (
-                            <div className="aem-GridColumn aem-GridColumn--default--1">
+                            <div className="aem-GridColumn aem-GridColumn--default--1  aem-GridColumn--phone--2">
                                 <div className="box">
                                     <div className="box-span">
                                         <span >{key.img}</span>

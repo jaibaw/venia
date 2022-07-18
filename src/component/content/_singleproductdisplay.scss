@@ -63,8 +63,8 @@
     }
 
     .product-display {
-        // width: 93%;
-        // height: 179%;
+        width: -webkit-fill-available;
+        height: 100vw;
         border: aliceblue 1px solid;
         padding: 20px 20px 20px 20px;
         // margin: 35px 0px 10px 3%;
@@ -72,29 +72,28 @@
     }
 
     .single-img-display {
-        // width: 700px;
-        // height: 850px;
+        height: -webkit-fill-available;
         padding: 25px 20px 20px 20px;
-        margin-left: 25%;
     }
 
     .details-div {
-        // margin-top: 65%;
-        // margin-left: 3%;
+        margin-top: 3vw;
     }
 
-    .end-border {
-        //       display: none;
+    .product-title-span-display {
+        font: normal normal 600 6vw Source Serif Pro;
+        margin-left: 3vw;
     }
 
     .product-title-span {
-        font: normal normal 600 40px/45px Source Serif Pro;
-        padding-bottom: 10px;
+        font: normal normal 600 6vw Source Serif Pro;
     }
-
     .product-discription-span {
-        font: normal normal 600 22px/26px Muli;
-        padding-bottom: 10px;
+        padding-bottom: 3vw;
+        margin-left: 34vw;
     }
 
+    .end-border {
+        margin-left: 33vw;
+    }
 }

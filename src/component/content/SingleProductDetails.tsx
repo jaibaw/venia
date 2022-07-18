@@ -41,7 +41,7 @@ function SingleProductDetails() {
     return (
         <div>
             <div className="aem-Grid aem-Grid--12">
-                <div className="breadcum">
+                <div>
                     <Breadcrum />
                 </div>
                 <div className='aem-GridColumn  aem-GridColumn--phone--12'>
@@ -85,15 +85,22 @@ function SingleProductDetails() {
                     <div className="product-attribute">
                         <span className="product-attribute-span">Size</span>
                     </div>
-                    <Size />
+                    <div className=" aem-GridColumn--phone--12">
+                        <Size />
+                    </div>
                 </div>
                 <div className="product-attribute">
                     <div className="product-attribute">
                         <span className="product-attribute-span">Quantity</span>
                     </div>
-                    <Quantity
-                        quantityId={0}
-                    />
+
+                    <div className=" aem-GridColumn--phone--12">
+                        <div className="quantity-div">
+                            <Quantity
+                                quantityId={0}
+                            />
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <Link to={ROUTES.SHOPPING_CART}>{<img alt='addtocart' className="product-add-to-cart-logo" src={addtocart} onClick={addTocart} ></img>}</Link>
@@ -101,12 +108,12 @@ function SingleProductDetails() {
                 </div>
                 <div className="share-save-div">
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--2">
+                        <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--6">
                             <img className="save-share-logo" alt='save' src={heart}></img>
                             <label htmlFor='save' className="save-share-span">Save</label>
                         </div>
 
-                        <div className="aem-GridColumn aem-GridColumn--default--3">
+                        <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--6">
                             <img className="save-share-logo" alt='share' src={share}></img>
                             <label htmlFor='share' className="save-share-span">Share</label>
                         </div>
